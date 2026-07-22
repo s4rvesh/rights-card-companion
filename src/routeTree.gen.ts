@@ -14,6 +14,7 @@ import { Route as RightsRouteImport } from './routes/rights'
 import { Route as MedicalRouteImport } from './routes/medical'
 import { Route as LegalRouteImport } from './routes/legal'
 import { Route as DetainedRouteImport } from './routes/detained'
+import { Route as CardRouteImport } from './routes/card'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SettingsRoute = SettingsRouteImport.update({
@@ -41,6 +42,11 @@ const DetainedRoute = DetainedRouteImport.update({
   path: '/detained',
   getParentRoute: () => rootRouteImport,
 } as any)
+const CardRoute = CardRouteImport.update({
+  id: '/card',
+  path: '/card',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -49,6 +55,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/card': typeof CardRoute
   '/detained': typeof DetainedRoute
   '/legal': typeof LegalRoute
   '/medical': typeof MedicalRoute
@@ -57,6 +64,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/card': typeof CardRoute
   '/detained': typeof DetainedRoute
   '/legal': typeof LegalRoute
   '/medical': typeof MedicalRoute
@@ -66,6 +74,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/card': typeof CardRoute
   '/detained': typeof DetainedRoute
   '/legal': typeof LegalRoute
   '/medical': typeof MedicalRoute
@@ -74,12 +83,27 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/detained' | '/legal' | '/medical' | '/rights' | '/settings'
+  fullPaths:
+    | '/'
+    | '/card'
+    | '/detained'
+    | '/legal'
+    | '/medical'
+    | '/rights'
+    | '/settings'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/detained' | '/legal' | '/medical' | '/rights' | '/settings'
+  to:
+    | '/'
+    | '/card'
+    | '/detained'
+    | '/legal'
+    | '/medical'
+    | '/rights'
+    | '/settings'
   id:
     | '__root__'
     | '/'
+    | '/card'
     | '/detained'
     | '/legal'
     | '/medical'
@@ -89,6 +113,7 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  CardRoute: typeof CardRoute
   DetainedRoute: typeof DetainedRoute
   LegalRoute: typeof LegalRoute
   MedicalRoute: typeof MedicalRoute
@@ -133,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DetainedRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/card': {
+      id: '/card'
+      path: '/card'
+      fullPath: '/card'
+      preLoaderRoute: typeof CardRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -145,6 +177,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  CardRoute: CardRoute,
   DetainedRoute: DetainedRoute,
   LegalRoute: LegalRoute,
   MedicalRoute: MedicalRoute,
