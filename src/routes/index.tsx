@@ -1,7 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Link } from "@tanstack/react-router";
+import { useEffect, useState } from "react";
 import home from "../content/home.json";
 import { useLang, type Lang } from "../i18n/useLang";
+import { onPwaEvent } from "../pwa/register";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -25,6 +27,7 @@ export const Route = createFileRoute("/")({
 
 function Index() {
   const { lang, setLang, t } = useLang();
+  const offlineReady = useOfflineReadyBar();
 
   // Four full-height stacked buttons. Order matches home.buttons; styling
   // per index below to satisfy the palette-only rule.
@@ -101,8 +104,43 @@ function Index() {
           {t(home, "settings")}
         </Link>
       </div>
+      {offlineReady ? (
+        <div
+          role="status"
+          aria-live="polite"
+          className="fixed inset-x-0 bottom-0 z-50 bg-ink px-4 py-3 text-center font-mono text-sm text-hivis"
+        >
+          {t(home, "offline_ready")}
+        </div>
+      ) : null}
     </div>
   );
+}
+
+const SESSION_KEY = "rc.offlineReadyShown";
+
+function useOfflineReadyBar(): boolean {
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    try {
+      if (sessionStorage.getItem(SESSION_KEY)) return;
+    } catch {
+      /* ignore */
+    }
+    const off = onPwaEvent((e) => {
+      if (e !== "offline-ready") return;
+      try {
+        sessionStorage.setItem(SESSION_KEY, "1");
+      } catch {
+        /* ignore */
+      }
+      setShow(true);
+      window.setTimeout(() => setShow(false), 3000);
+    });
+    return off;
+  }, []);
+  return show;
 }
 
 function LangButton({
