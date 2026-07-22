@@ -31,6 +31,7 @@ function RightsScreen() {
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const [index, setIndex] = useState(0);
   const [officerMode, setOfficerMode] = useState(false);
+  const [exporting, setExporting] = useState(false);
 
   // Track current card via scroll position.
   useEffect(() => {
@@ -137,6 +138,16 @@ function RightsScreen() {
 
   const current = CARDS[index] ?? CARDS[0];
 
+  const exportLockScreen = useCallback(async () => {
+    if (!current) return;
+    setExporting(true);
+    try {
+      await exportRightAsLockScreen(current, t);
+    } finally {
+      setExporting(false);
+    }
+  }, [current, t]);
+
   if (officerMode && current) {
     // Locked single-card view. No swipe, no chrome. Long-press to exit.
     return (
@@ -190,6 +201,14 @@ function RightsScreen() {
         >
           Show to officer
         </button>
+        <button
+          type="button"
+          onClick={() => void exportLockScreen()}
+          disabled={exporting}
+          className="mt-2 w-full border-2 border-ink bg-paper px-4 py-3 font-display text-sm font-extrabold uppercase tracking-tight text-ink disabled:opacity-50"
+        >
+          {exporting ? "Exporting…" : "Export as lock screen"}
+        </button>
       </div>
 
       {/* Back link — small, top-left, unobtrusive */}
@@ -234,4 +253,153 @@ function CardBody({
       </div>
     </div>
   );
+}
+
+// ---------- Lock-screen PNG export ----------
+// Pure client-side. No html2canvas, no external libraries, no network.
+// Draws directly to a 1170x2532 canvas (iPhone Pro portrait).
+
+const LS_W = 1170;
+const LS_H = 2532;
+const COLOR_HIVIS = "#F2E205";
+const COLOR_INK = "#0B0B0C";
+const COLOR_STEEL = "#6B7078";
+
+function wrapLines(
+  ctx: CanvasRenderingContext2D,
+  text: string,
+  maxWidth: number,
+): string[] {
+  const words = text.split(/\s+/).filter(Boolean);
+  const lines: string[] = [];
+  let line = "";
+  for (const word of words) {
+    const trial = line ? `${line} ${word}` : word;
+    if (ctx.measureText(trial).width <= maxWidth) {
+      line = trial;
+    } else {
+      if (line) lines.push(line);
+      // Word longer than maxWidth: hard-break by chars.
+      if (ctx.measureText(word).width > maxWidth) {
+        let chunk = "";
+        for (const ch of word) {
+          const t = chunk + ch;
+          if (ctx.measureText(t).width > maxWidth) {
+            if (chunk) lines.push(chunk);
+            chunk = ch;
+          } else {
+            chunk = t;
+          }
+        }
+        line = chunk;
+      } else {
+        line = word;
+      }
+    }
+  }
+  if (line) lines.push(line);
+  return lines;
+}
+
+function drawCentered(
+  ctx: CanvasRenderingContext2D,
+  lines: string[],
+  cx: number,
+  yTop: number,
+  lineHeight: number,
+): void {
+  for (let i = 0; i < lines.length; i++) {
+    ctx.fillText(lines[i], cx, yTop + i * lineHeight);
+  }
+}
+
+async function exportRightAsLockScreen(
+  right: Right,
+  t: (obj: Record<string, unknown>, key?: string) => string,
+): Promise<void> {
+  // Ensure webfonts are ready so the canvas uses Archivo / JetBrains Mono.
+  try {
+    if (typeof document !== "undefined" && document.fonts?.ready) {
+      await document.fonts.ready;
+    }
+  } catch {
+    // ignore
+  }
+
+  const canvas = document.createElement("canvas");
+  canvas.width = LS_W;
+  canvas.height = LS_H;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) return;
+
+  // Background
+  ctx.fillStyle = COLOR_HIVIS;
+  ctx.fillRect(0, 0, LS_W, LS_H);
+
+  const sideMargin = 120;
+  const maxWidth = LS_W - sideMargin * 2;
+
+  const title = (t(right, "title") || "").toUpperCase();
+  const body = t(right, "body") || "";
+  const source = right.source || "";
+
+  // Title
+  const titleSize = 110;
+  const titleLineHeight = Math.round(titleSize * 1.05);
+  ctx.fillStyle = COLOR_INK;
+  ctx.textAlign = "center";
+  ctx.textBaseline = "top";
+  ctx.font = `800 ${titleSize}px "Archivo", "Noto Sans Devanagari", system-ui, sans-serif`;
+  const titleLines = wrapLines(ctx, title, maxWidth);
+
+  // Body
+  const bodySize = 66;
+  const bodyLineHeight = Math.round(bodySize * 1.35);
+  ctx.font = `500 ${bodySize}px "Archivo", "Noto Sans Devanagari", system-ui, sans-serif`;
+  const bodyLines = wrapLines(ctx, body, maxWidth);
+
+  const gap = 90;
+  const blockHeight =
+    titleLines.length * titleLineHeight + gap + bodyLines.length * bodyLineHeight;
+  const blockTop = Math.max(180, Math.round((LS_H - blockHeight) / 2));
+
+  // Draw title
+  ctx.font = `800 ${titleSize}px "Archivo", "Noto Sans Devanagari", system-ui, sans-serif`;
+  drawCentered(ctx, titleLines, LS_W / 2, blockTop, titleLineHeight);
+
+  // Draw body
+  ctx.font = `500 ${bodySize}px "Archivo", "Noto Sans Devanagari", system-ui, sans-serif`;
+  drawCentered(
+    ctx,
+    bodyLines,
+    LS_W / 2,
+    blockTop + titleLines.length * titleLineHeight + gap,
+    bodyLineHeight,
+  );
+
+  // Source, bottom, steel, mono
+  const sourceSize = 34;
+  ctx.font = `400 ${sourceSize}px "JetBrains Mono", ui-monospace, monospace`;
+  ctx.fillStyle = COLOR_STEEL;
+  ctx.textBaseline = "alphabetic";
+  ctx.fillText(source, LS_W / 2, LS_H - 160);
+
+  const blob: Blob | null = await new Promise((resolve) =>
+    canvas.toBlob((b) => resolve(b), "image/png"),
+  );
+  if (!blob) return;
+
+  const url = URL.createObjectURL(blob);
+  const safe = (t(right, "title") || right.id || "right")
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .slice(0, 40);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = `rights-card-${safe || "lockscreen"}.png`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
 }
