@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from "react";
 import legalAid from "@/content/legalaid.json";
 import copy from "@/content/legal.json";
 import { useLang } from "@/i18n/useLang";
-import type { LegalAidEntry } from "@/content/types";
+import type { LegalAidContact } from "@/content/types";
 import {
   Select,
   SelectContent,
@@ -62,7 +62,7 @@ function PhoneGlyph() {
   );
 }
 
-function Row({ entry, lang, t }: { entry: LegalAidEntry; lang: string; t: (o: Record<string, unknown>, k?: string) => string }) {
+function Row({ entry, lang, t }: { entry: LegalAidContact; lang: string; t: (o: Record<string, unknown>, k?: string) => string }) {
   void lang;
   const name = t(entry, "name");
   return (
@@ -99,7 +99,7 @@ function LegalScreen() {
     setSelectedState(readStoredState());
   }, []);
 
-  const entries = legalAid as LegalAidEntry[];
+  const entries = legalAid as LegalAidContact[];
 
   const { national, allStateScopes, forSelected, otherStates } = useMemo(() => {
     const national = entries.filter((e) => e.scope === "national");
