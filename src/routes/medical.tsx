@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import medical from "@/content/medical.json";
 import hospitals from "@/content/hospitals.json";
 import copy from "@/content/medicalUi.json";
+import meta from "@/content/meta.json";
 import type { MedicalCard, Hospital } from "@/content/types";
 import { useLang } from "@/i18n/useLang";
 
@@ -152,6 +153,14 @@ function MedicalScreen() {
             {t(copy, "hospitals")}
             {selectedState ? ` — ${selectedState}` : ""}
           </h2>
+          {allHospitals.length === 0 ? (
+            <div className="flex min-h-[30vh] items-center justify-center px-6">
+              <p className="text-center font-sans text-[16px] leading-snug text-steel">
+                {t(meta, "empty_hospitals")}
+              </p>
+            </div>
+          ) : (
+            <>
           {!selectedState && (
             <p className="px-4 py-4 font-sans text-[15px] leading-snug text-steel">
               {t(copy, "no_state")}
@@ -179,6 +188,8 @@ function MedicalScreen() {
               <PhoneGlyph />
             </a>
           ))}
+            </>
+          )}
         </section>
       </div>
     </div>
