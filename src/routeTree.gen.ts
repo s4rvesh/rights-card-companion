@@ -9,13 +9,31 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SettingsRouteImport } from './routes/settings'
 import { Route as RightsRouteImport } from './routes/rights'
+import { Route as MedicalRouteImport } from './routes/medical'
+import { Route as LegalRouteImport } from './routes/legal'
 import { Route as DetainedRouteImport } from './routes/detained'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SettingsRoute = SettingsRouteImport.update({
+  id: '/settings',
+  path: '/settings',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const RightsRoute = RightsRouteImport.update({
   id: '/rights',
   path: '/rights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MedicalRoute = MedicalRouteImport.update({
+  id: '/medical',
+  path: '/medical',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LegalRoute = LegalRouteImport.update({
+  id: '/legal',
+  path: '/legal',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DetainedRoute = DetainedRouteImport.update({
@@ -32,40 +50,80 @@ const IndexRoute = IndexRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/detained': typeof DetainedRoute
+  '/legal': typeof LegalRoute
+  '/medical': typeof MedicalRoute
   '/rights': typeof RightsRoute
+  '/settings': typeof SettingsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/detained': typeof DetainedRoute
+  '/legal': typeof LegalRoute
+  '/medical': typeof MedicalRoute
   '/rights': typeof RightsRoute
+  '/settings': typeof SettingsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/detained': typeof DetainedRoute
+  '/legal': typeof LegalRoute
+  '/medical': typeof MedicalRoute
   '/rights': typeof RightsRoute
+  '/settings': typeof SettingsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/detained' | '/rights'
+  fullPaths: '/' | '/detained' | '/legal' | '/medical' | '/rights' | '/settings'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/detained' | '/rights'
-  id: '__root__' | '/' | '/detained' | '/rights'
+  to: '/' | '/detained' | '/legal' | '/medical' | '/rights' | '/settings'
+  id:
+    | '__root__'
+    | '/'
+    | '/detained'
+    | '/legal'
+    | '/medical'
+    | '/rights'
+    | '/settings'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   DetainedRoute: typeof DetainedRoute
+  LegalRoute: typeof LegalRoute
+  MedicalRoute: typeof MedicalRoute
   RightsRoute: typeof RightsRoute
+  SettingsRoute: typeof SettingsRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/settings': {
+      id: '/settings'
+      path: '/settings'
+      fullPath: '/settings'
+      preLoaderRoute: typeof SettingsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/rights': {
       id: '/rights'
       path: '/rights'
       fullPath: '/rights'
       preLoaderRoute: typeof RightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/medical': {
+      id: '/medical'
+      path: '/medical'
+      fullPath: '/medical'
+      preLoaderRoute: typeof MedicalRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/legal': {
+      id: '/legal'
+      path: '/legal'
+      fullPath: '/legal'
+      preLoaderRoute: typeof LegalRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/detained': {
@@ -88,7 +146,10 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   DetainedRoute: DetainedRoute,
+  LegalRoute: LegalRoute,
+  MedicalRoute: MedicalRoute,
   RightsRoute: RightsRoute,
+  SettingsRoute: SettingsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
