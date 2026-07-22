@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import detained from "../content/detained.json";
+import meta from "../content/meta.json";
 import type { DetainedStep } from "../content/types";
 import { useLang } from "../i18n/useLang";
 
@@ -42,6 +43,13 @@ function DetainedScreen() {
 
   return (
     <div className="flex min-h-screen flex-col bg-paper text-ink">
+      <div
+        role="note"
+        className="bg-alert px-4 py-2 text-center font-sans font-semibold text-paper"
+        style={{ fontSize: "14px", lineHeight: 1.3 }}
+      >
+        {t(meta, "draft_banner")}
+      </div>
       <header className="flex items-center gap-3 border-b border-steel px-4 py-3">
         <Link
           to="/"
