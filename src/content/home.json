@@ -1,0 +1,32 @@
+{
+  "buttons": [
+    {
+      "id": "rights",
+      "to": "/rights",
+      "label_en": "MY RIGHTS",
+      "label_hi": "मेरे अधिकार"
+    },
+    {
+      "id": "detained",
+      "to": "/detained",
+      "label_en": "I'VE BEEN DETAINED",
+      "label_hi": "मुझे हिरासत में लिया गया है"
+    },
+    {
+      "id": "legal",
+      "to": "/legal",
+      "label_en": "LEGAL HELP",
+      "label_hi": "कानूनी मदद"
+    },
+    {
+      "id": "medical",
+      "to": "/medical",
+      "label_en": "MEDICAL",
+      "label_hi": "चिकित्सा"
+    }
+  ],
+  "settings_en": "Settings",
+  "settings_hi": "सेटिंग्स",
+  "lang_en_label": "EN",
+  "lang_hi_label": "हिं"
+}
