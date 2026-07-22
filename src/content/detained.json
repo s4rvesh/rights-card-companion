@@ -1,16 +1,51 @@
 [
   {
     "step": 1,
-    "title_en": "PLACEHOLDER — NEEDS LEGAL REVIEW",
-    "title_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक",
-    "detail_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. First step of the detained-person checklist. Replace with vetted guidance.",
-    "detail_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक। पहला चरण।"
+    "title_en": "Stay calm. Say your name.",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "Give your name. Do not argue, run, or say anything else about the day. Staying calm keeps you safer.",
+    "detail_hi": "[HI PENDING]"
   },
   {
     "step": 2,
-    "title_en": "PLACEHOLDER — NEEDS LEGAL REVIEW",
-    "title_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक",
-    "detail_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. Second step to verify ordered rendering.",
-    "detail_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक। दूसरा चरण।"
+    "title_en": "Ask what you are being arrested for.",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "You are entitled to be told the grounds. Ask clearly and remember what they say.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "step": 3,
+    "title_en": "Ask to make a call. Call legal aid first.",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "Someone must be informed of your arrest. Call a legal aid number before anyone else — they can act fastest.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "step": 4,
+    "title_en": "Ask to speak to a lawyer.",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "You have the right to meet a lawyer of your choice. If you cannot afford one, free legal aid is your right.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "step": 5,
+    "title_en": "Do not sign anything unread.",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "Read anything before signing. You are not required to sign a statement you disagree with or have not read.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "step": 6,
+    "title_en": "If you are hurt, say so and ask for a doctor.",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "You can ask to be examined by a medical practitioner. Say out loud if you are injured.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "step": 7,
+    "title_en": "Note the officer's name and number.",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "Officers must wear visible identification. Remember or write down the name and badge number.",
+    "detail_hi": "[HI PENDING]"
   }
 ]
