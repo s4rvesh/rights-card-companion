@@ -1,0 +1,24 @@
+[
+  {
+    "id": "placeholder-1",
+    "condition_en": "PLACEHOLDER — NEEDS LEGAL REVIEW",
+    "condition_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक",
+    "signs_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. Do not treat as medical advice.",
+    "signs_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक।",
+    "actions_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. Replace with vetted first-aid steps.",
+    "actions_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक।",
+    "emergency_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. Replace with when-to-call-112 criteria.",
+    "emergency_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक।"
+  },
+  {
+    "id": "placeholder-2",
+    "condition_en": "PLACEHOLDER — NEEDS LEGAL REVIEW",
+    "condition_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक",
+    "signs_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. Second sample entry.",
+    "signs_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक।",
+    "actions_en": "PLACEHOLDER — NEEDS LEGAL REVIEW.",
+    "actions_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक।",
+    "emergency_en": "PLACEHOLDER — NEEDS LEGAL REVIEW.",
+    "emergency_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक।"
+  }
+]
