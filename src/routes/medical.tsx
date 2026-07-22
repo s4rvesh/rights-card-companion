@@ -82,7 +82,7 @@ function Block({
 }
 
 function MedicalScreen() {
-  const { lang, t } = useLang();
+  const { t } = useLang();
   const [selectedState, setSelectedState] = useState("");
 
   useEffect(() => {
@@ -183,5 +183,4 @@ function MedicalScreen() {
       </div>
     </div>
   );
-  void lang;
 }
