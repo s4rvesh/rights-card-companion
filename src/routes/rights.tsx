@@ -31,6 +31,7 @@ function RightsScreen() {
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const [index, setIndex] = useState(0);
   const [officerMode, setOfficerMode] = useState(false);
+  const [exporting, setExporting] = useState(false);
 
   // Track current card via scroll position.
   useEffect(() => {
@@ -137,6 +138,16 @@ function RightsScreen() {
 
   const current = CARDS[index] ?? CARDS[0];
 
+  const exportLockScreen = useCallback(async () => {
+    if (!current) return;
+    setExporting(true);
+    try {
+      await exportRightAsLockScreen(current, t);
+    } finally {
+      setExporting(false);
+    }
+  }, [current, t]);
+
   if (officerMode && current) {
     // Locked single-card view. No swipe, no chrome. Long-press to exit.
     return (
@@ -189,6 +200,14 @@ function RightsScreen() {
           className="w-full bg-ink px-4 py-4 font-display text-lg font-extrabold uppercase tracking-tight text-paper"
         >
           Show to officer
+        </button>
+        <button
+          type="button"
+          onClick={() => void exportLockScreen()}
+          disabled={exporting}
+          className="mt-2 w-full border-2 border-ink bg-paper px-4 py-3 font-display text-sm font-extrabold uppercase tracking-tight text-ink disabled:opacity-50"
+        >
+          {exporting ? "Exporting…" : "Export as lock screen"}
         </button>
       </div>
 
