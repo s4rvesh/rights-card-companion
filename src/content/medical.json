@@ -1,24 +1,68 @@
 [
   {
-    "id": "placeholder-1",
-    "condition_en": "PLACEHOLDER — NEEDS LEGAL REVIEW",
-    "condition_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक",
-    "signs_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. Do not treat as medical advice.",
-    "signs_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक।",
-    "actions_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. Replace with vetted first-aid steps.",
-    "actions_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक।",
-    "emergency_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. Replace with when-to-call-112 criteria.",
-    "emergency_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक।"
+    "id": "heatstroke",
+    "condition_en": "Heatstroke",
+    "condition_hi": "[HI PENDING] लू लगना / हीटस्ट्रोक",
+    "signs_en": "Hot, flushed, dry skin. Sweating may have stopped. Confusion, restlessness, headache, fast heartbeat. Body feels very hot to touch. May collapse or have a seizure.",
+    "signs_hi": "[HI PENDING]",
+    "actions_en": "Move them to a cool, shaded place at once. Remove outer clothing. Cool them fast: wrap in a wet sheet and keep pouring cool water over it, or fan and sponge with cool water. Put cold packs at the neck, armpits and groin. If they are alert and can swallow, give sips of cool water. Keep cooling until they no longer feel hot.",
+    "actions_hi": "[HI PENDING]",
+    "emergency_en": "This is a medical emergency. Get them to a hospital or call for help immediately. If they are confused, unconscious, or having a seizure, that is life-threatening — do not wait.",
+    "emergency_hi": "[HI PENDING]"
   },
   {
-    "id": "placeholder-2",
-    "condition_en": "PLACEHOLDER — NEEDS LEGAL REVIEW",
-    "condition_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक",
-    "signs_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. Second sample entry.",
-    "signs_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक।",
-    "actions_en": "PLACEHOLDER — NEEDS LEGAL REVIEW.",
-    "actions_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक।",
-    "emergency_en": "PLACEHOLDER — NEEDS LEGAL REVIEW.",
-    "emergency_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक।"
+    "id": "dehydration",
+    "condition_en": "Dehydration & heat exhaustion",
+    "condition_hi": "[HI PENDING] निर्जलीकरण और गर्मी से थकावट",
+    "signs_en": "Heavy sweating, pale and clammy skin, headache, dizziness, tiredness, muscle cramps, feeling sick, dark urine or not urinating. Comes on before heatstroke.",
+    "signs_hi": "[HI PENDING]",
+    "actions_en": "Move to a cool, shaded place and have them lie down with legs raised. Give plenty of water in small sips; an ORS packet or a pinch of salt and some sugar in water helps replace salts. Loosen tight clothing. Let them rest and cool down slowly.",
+    "actions_hi": "[HI PENDING]",
+    "emergency_en": "If they get worse, stop sweating, become confused, or their skin turns hot and dry, treat it as heatstroke and get help immediately.",
+    "emergency_hi": "[HI PENDING]"
+  },
+  {
+    "id": "teargas",
+    "condition_en": "Tear gas exposure",
+    "condition_hi": "[HI PENDING] आँसू गैस का संपर्क",
+    "signs_en": "Burning and watering eyes, burning nose, mouth and throat, coughing, tight chest, skin stinging. Symptoms usually start within a minute of exposure.",
+    "signs_hi": "[HI PENDING]",
+    "actions_en": "Get to fresh air and higher ground, away from the gas. Stay calm and breathe evenly — do not rub your eyes. Flush open eyes with clean water for 10 to 15 minutes. Remove contact lenses. Wash exposed skin with soap and water. Change out of contaminated clothing as soon as you can and air it out separately; the powder stays active for days.",
+    "actions_hi": "[HI PENDING]",
+    "emergency_en": "Most people recover in 15 to 30 minutes. Get medical help if breathing stays hard, if symptoms last beyond 30 minutes, or for anyone with asthma, a lung condition, the very young or the elderly.",
+    "emergency_hi": "[HI PENDING]"
+  },
+  {
+    "id": "bleeding",
+    "condition_en": "Serious bleeding",
+    "condition_hi": "[HI PENDING] गंभीर रक्तस्राव",
+    "signs_en": "Blood flowing or spurting from a wound, a deep cut, or blood soaking through a dressing.",
+    "signs_hi": "[HI PENDING]",
+    "actions_en": "Press hard directly on the wound with a clean cloth or your hand and keep pressing. Raise the injured part above the level of the heart if you can. Do not remove a cloth once it is soaked — add another on top and keep pressing. Lay the person down and keep them warm.",
+    "actions_hi": "[HI PENDING]",
+    "emergency_en": "Get help immediately for any heavy bleeding, or if the person becomes pale, cold, drowsy or confused — these are signs of dangerous blood loss.",
+    "emergency_hi": "[HI PENDING]"
+  },
+  {
+    "id": "blunt-injury",
+    "condition_en": "Baton blow or blunt injury",
+    "condition_hi": "[HI PENDING] लाठी की चोट",
+    "signs_en": "Pain, swelling or bruising after a blow. Possible broken bone if there is deformity, severe pain, or the part cannot be moved.",
+    "signs_hi": "[HI PENDING]",
+    "actions_en": "Rest the injured part and support it in the most comfortable position — do not force it straight. Apply a cold pack or cloth-wrapped ice for swelling. Do not move someone who may have a head, neck or spine injury unless they are in danger; keep them still and get help.",
+    "actions_hi": "[HI PENDING]",
+    "emergency_en": "Get help immediately for a blow to the head, neck, chest or abdomen, for any loss of consciousness, confusion, vomiting, trouble breathing, or a suspected broken bone.",
+    "emergency_hi": "[HI PENDING]"
+  },
+  {
+    "id": "crush",
+    "condition_en": "Crush injury (crowd crush)",
+    "condition_hi": "[HI PENDING] भीड़ में दबने की चोट",
+    "signs_en": "Someone trapped or crushed by a crowd or object, or having trouble breathing after being pressed in a dense crowd. Chest may be compressed so they cannot expand it to breathe.",
+    "signs_hi": "[HI PENDING]",
+    "actions_en": "If a crowd is compressing you, keep your arms up in front of your chest to protect space to breathe and move with the crowd, not against it. Help free anyone pinned only if it is safe. Once free, help them to fresh air and a comfortable position and monitor their breathing.",
+    "actions_hi": "[HI PENDING]",
+    "emergency_en": "Get medical help immediately for anyone who was trapped and is short of breath, has chest pain, or was crushed for more than a few minutes — internal injury may not be visible.",
+    "emergency_hi": "[HI PENDING]"
   }
 ]
