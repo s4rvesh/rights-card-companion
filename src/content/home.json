@@ -28,5 +28,7 @@
   "settings_en": "Settings",
   "settings_hi": "सेटिंग्स",
   "lang_en_label": "EN",
-  "lang_hi_label": "हिं"
+  "lang_hi_label": "हिं",
+  "offline_ready_en": "Ready to use offline",
+  "offline_ready_hi": "ऑफ़लाइन उपयोग के लिए तैयार"
 }
