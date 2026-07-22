@@ -8,13 +8,13 @@ import { onPwaEvent } from "../pwa/register";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rights Card" },
+      { title: "Right2Protest" },
       {
         name: "description",
         content:
           "Offline pocket reference for your rights on arrest, legal aid contacts, and emergency medical guidance in India.",
       },
-      { property: "og:title", content: "Rights Card" },
+      { property: "og:title", content: "Right2Protest" },
       {
         property: "og:description",
         content:
