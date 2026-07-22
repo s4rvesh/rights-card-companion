@@ -1,0 +1,18 @@
+{
+  "title_en": "MEDICAL",
+  "title_hi": "चिकित्सा",
+  "back_en": "HOME",
+  "back_hi": "होम",
+  "signs_en": "SIGNS",
+  "signs_hi": "लक्षण",
+  "actions_en": "WHAT TO DO",
+  "actions_hi": "क्या करें",
+  "emergency_en": "GET HELP NOW IF",
+  "emergency_hi": "तुरंत मदद लें यदि",
+  "hospitals_en": "HOSPITALS",
+  "hospitals_hi": "अस्पताल",
+  "no_state_en": "Select your state on the Legal Help screen to see nearby hospitals.",
+  "no_state_hi": "आस-पास के अस्पताल देखने के लिए कानूनी सहायता स्क्रीन पर अपना राज्य चुनें।",
+  "no_hospitals_en": "No hospitals listed for your state yet.",
+  "no_hospitals_hi": "आपके राज्य के लिए अभी कोई अस्पताल सूचीबद्ध नहीं है।"
+}
