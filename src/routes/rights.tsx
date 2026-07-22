@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { useCallback, useEffect, useRef, useState } from "react";
 import rights from "../content/rights.json";
+import meta from "../content/meta.json";
 import type { Right } from "../content/types";
 import { useLang } from "../i18n/useLang";
 
@@ -155,6 +156,7 @@ function RightsScreen() {
         className="fixed inset-0 flex flex-col bg-hivis text-ink"
         style={{ touchAction: "none" }}
       >
+        <DraftBanner t={t} />
         <CardBody right={current} t={t} />
       </div>
     );
@@ -162,6 +164,7 @@ function RightsScreen() {
 
   return (
     <div className="fixed inset-0 flex flex-col bg-paper">
+      <DraftBanner t={t} />
       <div
         ref={scrollerRef}
         className="flex flex-1 snap-x snap-mandatory overflow-x-auto overflow-y-hidden"
@@ -220,6 +223,22 @@ function RightsScreen() {
       >
         ← HOME
       </Link>
+    </div>
+  );
+}
+
+function DraftBanner({
+  t,
+}: {
+  t: (obj: Record<string, unknown>, key?: string) => string;
+}) {
+  return (
+    <div
+      role="note"
+      className="shrink-0 bg-alert px-4 py-2 text-center font-sans font-semibold text-paper"
+      style={{ fontSize: "14px", lineHeight: 1.3 }}
+    >
+      {t(meta, "draft_banner")}
     </div>
   );
 }
