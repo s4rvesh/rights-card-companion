@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import legalAid from "@/content/legalaid.json";
 import copy from "@/content/legal.json";
+import meta from "@/content/meta.json";
 import { useLang } from "@/i18n/useLang";
 import type { LegalAidContact } from "@/content/types";
 import {
@@ -166,6 +167,14 @@ function LegalScreen() {
         <p className="px-4 py-6 font-sans text-[16px] leading-snug text-ink">
           {t(copy, "banner")}
         </p>
+
+        {entries.length === 0 && (
+          <div className="flex min-h-[50vh] items-center justify-center px-6">
+            <p className="text-center font-sans text-[16px] leading-snug text-steel">
+              {t(meta, "empty_legal")}
+            </p>
+          </div>
+        )}
 
         {national.length > 0 && (
           <section>
