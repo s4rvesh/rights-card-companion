@@ -1,4 +1,8 @@
 {
   "draft_banner_en": "DRAFT — not yet reviewed by a lawyer. Verify before relying on this.",
-  "draft_banner_hi": "ड्राफ़्ट — अभी तक किसी वकील द्वारा समीक्षित नहीं। भरोसा करने से पहले सत्यापित करें।"
+  "draft_banner_hi": "ड्राफ़्ट — अभी तक किसी वकील द्वारा समीक्षित नहीं। भरोसा करने से पहले सत्यापित करें।",
+  "empty_legal_en": "Legal aid numbers are being added. For now, write an emergency contact on your arm before you go.",
+  "empty_legal_hi": "कानूनी सहायता नंबर जोड़े जा रहे हैं। अभी के लिए, जाने से पहले अपनी बांह पर एक आपातकालीन संपर्क लिखें।",
+  "empty_hospitals_en": "Hospital numbers coming soon.",
+  "empty_hospitals_hi": "अस्पताल के नंबर जल्द ही आ रहे हैं।"
 }
