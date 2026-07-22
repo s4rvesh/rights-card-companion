@@ -1,0 +1,18 @@
+[
+  {
+    "id": "placeholder-1",
+    "title_en": "PLACEHOLDER — NEEDS LEGAL REVIEW",
+    "title_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक",
+    "body_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. Do not display in production. Replace with vetted plain-language summary of the right.",
+    "body_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक। उत्पादन में प्रदर्शित न करें।",
+    "source": "PLACEHOLDER"
+  },
+  {
+    "id": "placeholder-2",
+    "title_en": "PLACEHOLDER — NEEDS LEGAL REVIEW",
+    "title_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक",
+    "body_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. Second sample entry to verify list rendering.",
+    "body_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक। सूची प्रस्तुतिकरण की जांच हेतु।",
+    "source": "PLACEHOLDER"
+  }
+]
