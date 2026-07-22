@@ -1,18 +1,66 @@
 [
   {
-    "id": "placeholder-1",
-    "title_en": "PLACEHOLDER — NEEDS LEGAL REVIEW",
-    "title_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक",
-    "body_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. Do not display in production. Replace with vetted plain-language summary of the right.",
-    "body_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक। उत्पादन में प्रदर्शित न करें।",
-    "source": "PLACEHOLDER"
+    "id": "grounds",
+    "title_en": "You must be told why",
+    "title_hi": "[HI PENDING] आपको कारण बताया जाना चाहिए",
+    "body_en": "The police must tell you the grounds for your arrest. Ask clearly: what am I being arrested for? They have to answer.",
+    "body_hi": "[HI PENDING]",
+    "source": "BNSS s.47(1) · Constitution Art. 22(1)"
   },
   {
-    "id": "placeholder-2",
-    "title_en": "PLACEHOLDER — NEEDS LEGAL REVIEW",
-    "title_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक",
-    "body_en": "PLACEHOLDER — NEEDS LEGAL REVIEW. Second sample entry to verify list rendering.",
-    "body_hi": "प्लेसहोल्डर — कानूनी समीक्षा आवश्यक। सूची प्रस्तुतिकरण की जांच हेतु।",
-    "source": "PLACEHOLDER"
+    "id": "bail",
+    "title_en": "For a bailable offence, you can be released",
+    "title_hi": "[HI PENDING]",
+    "body_en": "If the offence is bailable, the police must tell you that you can be released on bail and can arrange sureties.",
+    "body_hi": "[HI PENDING]",
+    "source": "BNSS s.47(2)"
+  },
+  {
+    "id": "lawyer",
+    "title_en": "You can meet a lawyer",
+    "title_hi": "[HI PENDING]",
+    "body_en": "You have the right to meet a lawyer of your choice during questioning. If you cannot afford one, the state must provide free legal aid.",
+    "body_hi": "[HI PENDING]",
+    "source": "BNSS s.38, s.341 · Constitution Art. 22(1), 39A"
+  },
+  {
+    "id": "inform",
+    "title_en": "Someone must be told you were taken",
+    "title_hi": "[HI PENDING]",
+    "body_en": "The police must inform a relative or friend of your choice that you have been arrested, and where you are being held.",
+    "body_hi": "[HI PENDING]",
+    "source": "BNSS s.48"
+  },
+  {
+    "id": "magistrate",
+    "title_en": "24 hours, then a magistrate",
+    "title_hi": "[HI PENDING]",
+    "body_en": "You cannot be held longer than 24 hours (not counting travel time) without being produced before a magistrate.",
+    "body_hi": "[HI PENDING]",
+    "source": "BNSS s.58 · Constitution Art. 22(2) · VERIFY SECTION NO."
+  },
+  {
+    "id": "force",
+    "title_en": "No more force than necessary",
+    "title_hi": "[HI PENDING]",
+    "body_en": "Police may not use more restraint than is necessary to stop you escaping. Routine handcuffing is not allowed.",
+    "body_hi": "[HI PENDING]",
+    "source": "BNSS s.46 · D.K. Basu (1997)"
+  },
+  {
+    "id": "women",
+    "title_en": "Extra protections for women",
+    "title_hi": "[HI PENDING]",
+    "body_en": "A woman should not be arrested between sunset and sunrise except in exceptional cases with a magistrate's prior permission. Only a woman officer may make the arrest.",
+    "body_hi": "[HI PENDING]",
+    "source": "BNSS s.43 · VERIFY SUBSECTION"
+  },
+  {
+    "id": "silent",
+    "title_en": "You do not have to incriminate yourself",
+    "title_hi": "[HI PENDING]",
+    "body_en": "Say your name. You are not required to answer questions that could be used against you. Do not sign anything you have not read.",
+    "body_hi": "[HI PENDING]",
+    "source": "Constitution Art. 20(3)"
   }
 ]
