@@ -28,13 +28,36 @@ export default defineConfig({
           cleanupOutdatedCaches: true,
         },
         manifest: {
-          name: "Rights Card",
-          short_name: "Rights",
+          id: "/",
+          name: "Right2Protest",
+          short_name: "Right2Protest",
+          description:
+            "Offline pocket reference for your rights on arrest, legal aid contacts, and emergency medical guidance in India.",
           display: "standalone",
           orientation: "portrait",
-          background_color: "#0B0B0C",
-          theme_color: "#F2E205",
-          start_url: "/#/",
+          lang: "en",
+          dir: "ltr",
+          scope: "/",
+          categories: ["education", "reference", "utilities"],
+          background_color: "#0D0D14",
+          theme_color: "#FFE600",
+          // The router uses real paths, not hash routing — "/#/" was a
+          // leftover from the original spec and breaks TWA scope checks.
+          start_url: "/",
+          shortcuts: [
+            {
+              name: "My rights",
+              short_name: "Rights",
+              url: "/rights",
+              icons: [{ src: "/icon-192.png", sizes: "192x192" }],
+            },
+            {
+              name: "Medical",
+              short_name: "Medical",
+              url: "/medical",
+              icons: [{ src: "/icon-192.png", sizes: "192x192" }],
+            },
+          ],
           icons: [
             { src: "/icon-192.png", sizes: "192x192", type: "image/png" },
             { src: "/icon-512.png", sizes: "512x512", type: "image/png" },
