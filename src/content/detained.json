@@ -4,48 +4,112 @@
     "title_en": "Stay calm. Say your name.",
     "title_hi": "[HI PENDING]",
     "detail_en": "Give your name. Do not argue, run, or say anything else about the day. Staying calm keeps you safer.",
-    "detail_hi": "[HI PENDING]"
+    "detail_hi": "[HI PENDING]",
+    "law": [
+      {
+        "code": "Constitution, Article 20(3)",
+        "text": "No person accused of any offence shall be compelled to be a witness against himself.",
+        "verbatim": true
+      }
+    ]
   },
   {
     "step": 2,
     "title_en": "Ask what you are being arrested for.",
     "title_hi": "[HI PENDING]",
     "detail_en": "You are entitled to be told the grounds. Ask clearly and remember what they say.",
-    "detail_hi": "[HI PENDING]"
+    "detail_hi": "[HI PENDING]",
+    "law": [
+      {
+        "code": "Constitution, Article 22(1)",
+        "text": "No person who is arrested shall be detained in custody without being informed, as soon as may be, of the grounds for such arrest ...",
+        "verbatim": true
+      },
+      {
+        "code": "BNSS s.47(1)",
+        "text": "The arresting officer must communicate the full particulars of the offence and the grounds of arrest.",
+        "verbatim": false
+      }
+    ]
   },
   {
     "step": 3,
     "title_en": "Ask to make a call. Call legal aid first.",
     "title_hi": "[HI PENDING]",
     "detail_en": "Someone must be informed of your arrest. Call a legal aid number before anyone else — they can act fastest.",
-    "detail_hi": "[HI PENDING]"
+    "detail_hi": "[HI PENDING]",
+    "law": [
+      {
+        "code": "BNSS s.48",
+        "text": "The arresting officer must immediately inform a nominated relative or friend of the arrest and place of detention.",
+        "verbatim": false
+      }
+    ]
   },
   {
     "step": 4,
     "title_en": "Ask to speak to a lawyer.",
     "title_hi": "[HI PENDING]",
     "detail_en": "You have the right to meet a lawyer of your choice. If you cannot afford one, free legal aid is your right.",
-    "detail_hi": "[HI PENDING]"
+    "detail_hi": "[HI PENDING]",
+    "law": [
+      {
+        "code": "Constitution, Article 22(1)",
+        "text": "No person who is arrested shall ... be denied the right to consult, and to be defended by, a legal practitioner of his choice.",
+        "verbatim": true
+      },
+      {
+        "code": "BNSS s.38",
+        "text": "An arrested person may meet an advocate of their choice during interrogation.",
+        "verbatim": false
+      }
+    ]
   },
   {
     "step": 5,
     "title_en": "Do not sign anything unread.",
     "title_hi": "[HI PENDING]",
     "detail_en": "Read anything before signing. You are not required to sign a statement you disagree with or have not read.",
-    "detail_hi": "[HI PENDING]"
+    "detail_hi": "[HI PENDING]",
+    "law": [
+      {
+        "code": "Constitution, Article 20(3)",
+        "text": "No person accused of any offence shall be compelled to be a witness against himself.",
+        "verbatim": true
+      },
+      {
+        "code": "BSA s.23",
+        "text": "A confession made to a police officer is generally not admissible against the accused.",
+        "verbatim": false
+      }
+    ]
   },
   {
     "step": 6,
     "title_en": "If you are hurt, say so and ask for a doctor.",
     "title_hi": "[HI PENDING]",
     "detail_en": "You can ask to be examined by a medical practitioner. Say out loud if you are injured.",
-    "detail_hi": "[HI PENDING]"
+    "detail_hi": "[HI PENDING]",
+    "law": [
+      {
+        "code": "BNSS s.53",
+        "text": "An arrested person may request examination by a registered medical practitioner to record any injuries.",
+        "verbatim": false
+      }
+    ]
   },
   {
     "step": 7,
     "title_en": "Note the officer's name and number.",
     "title_hi": "[HI PENDING]",
     "detail_en": "Officers must wear visible identification. Remember or write down the name and badge number.",
-    "detail_hi": "[HI PENDING]"
+    "detail_hi": "[HI PENDING]",
+    "law": [
+      {
+        "code": "BNSS s.36 · D.K. Basu (1997)",
+        "text": "Officers making an arrest must bear accurate, visible and clear identification, and prepare an arrest memo attested by a witness.",
+        "verbatim": false
+      }
+    ]
   }
 ]
