@@ -22,9 +22,49 @@ export default defineConfig({
         devOptions: { enabled: false },
         workbox: {
           globPatterns: ["**/*.{js,css,html,woff2,json,png,svg}"],
-          navigateFallback: "/index.html",
+          // The client build sits in a "client/" subdirectory, so workbox
+          // generated precache URLs like "client/assets/app.js" — which 404
+          // on the deployed site where assets are served from the root.
+          // One failed entry fails the whole precache install, so before this
+          // NOTHING was cached and the app was never really offline-capable.
+          modifyURLPrefix: { "client/": "" },
+          // This app is server-rendered, so the build emits NO html files —
+          // a navigateFallback would point at something that never exists.
+          // Instead each route's HTML is cached as it is fetched, and
+          // src/pwa/warm.ts fetches them all on first load so nothing has to
+          // be visited manually.
           navigateFallbackDenylist: [/^\/~oauth/],
-          runtimeCaching: [],
+          runtimeCaching: [
+            {
+              // Route documents. Matched by PATH, not by request.mode: the
+              // warm-up in src/pwa/warm.ts uses an ordinary fetch (the spec
+              // forbids constructing a fetch with mode:"navigate"), so a
+              // mode-based rule would never catch it. Path matching means the
+              // warm fetch and a real navigation share one cache entry.
+              urlPattern: ({
+                url,
+                sameOrigin,
+              }: {
+                url: URL;
+                sameOrigin: boolean;
+              }) =>
+                sameOrigin &&
+                /^\/(rights|detained|medical|legal|before|card)?\/?$/.test(
+                  url.pathname,
+                ),
+              handler: "NetworkFirst",
+              options: {
+                cacheName: "r2p-pages",
+                networkTimeoutSeconds: 4,
+                expiration: { maxEntries: 40, maxAgeSeconds: 60 * 60 * 24 * 90 },
+                cacheableResponse: { statuses: [200] },
+                // The warm fetch and a browser navigation send different
+                // Accept headers; without this a Vary:Accept response would
+                // miss the cache exactly when it is needed.
+                matchOptions: { ignoreVary: true },
+              },
+            },
+          ],
           cleanupOutdatedCaches: true,
         },
         manifest: {
