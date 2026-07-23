@@ -5,6 +5,7 @@ import hospitals from "@/content/hospitals.json";
 import copy from "@/content/medicalUi.json";
 import type { MedicalCard, Hospital } from "@/content/types";
 import { useLang } from "@/i18n/useLang";
+import { Notice } from "@/components/Notice";
 import { DisclosureList, DisclosureItem, Block } from "@/components/Disclosure";
 
 export const Route = createFileRoute("/medical")({
@@ -91,6 +92,7 @@ function MedicalScreen() {
         <h1 className="px-4 pb-4 pt-4 font-display text-[28px] font-extrabold uppercase text-ink">
           {t(copy, "title")}
         </h1>
+        <Notice kind="medical" />
 
         <DisclosureList>
           {cards.map((card) => (

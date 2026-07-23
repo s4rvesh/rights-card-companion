@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import detained from "@/content/detained.json";
 import type { DetainedStep } from "@/content/types";
 import { useLang } from "@/i18n/useLang";
+import { Notice } from "@/components/Notice";
 import { DisclosureList, DisclosureItem, Block, LawBlock } from "@/components/Disclosure";
 
 export const Route = createFileRoute("/detained")({
@@ -59,6 +60,7 @@ function DetainedScreen() {
         <h1 className="px-4 pb-4 pt-4 font-display text-[28px] font-extrabold uppercase text-ink">
           {t(COPY, "title")}
         </h1>
+        <Notice kind="legal" />
 
         <p
           role="note"

@@ -3,6 +3,7 @@ import { useCallback, useState } from "react";
 import rights from "@/content/rights.json";
 import type { Right } from "@/content/types";
 import { useLang } from "@/i18n/useLang";
+import { Notice } from "@/components/Notice";
 import {
   DisclosureList,
   DisclosureItem,
@@ -125,6 +126,7 @@ function RightsScreen() {
         <h1 className="px-4 pb-4 pt-4 font-display text-[28px] font-extrabold uppercase text-ink">
           {t(COPY, "title")}
         </h1>
+        <Notice kind="legal" />
 
         <DisclosureList>
           {RIGHTS.map((r) => (
