@@ -71,12 +71,26 @@
  * --spacing-<key> -> p-<key>, h-<key>, min-h-<key>, etc.
  */
 @theme {
-  /* Palette — the only colors in the app. No greys beyond steel. */
-  --color-ink: #0B0B0C;
-  --color-hivis: #F2E205;
-  --color-alert: #D4230C;
-  --color-paper: #FAFAF7;
-  --color-steel: #6B7078;
+  /*
+   * Palette v2 — same semantic roles, retuned for a modern app surface.
+   * Core five keep their names so existing screens don't break; the added
+   * tokens give cards depth and per-section identity.
+   */
+  --color-ink: #0D0D14;      /* text + the "detained" surface */
+  --color-hivis: #FFE600;    /* signature yellow — rights, primary action */
+  --color-alert: #FF2E4C;    /* urgent — legal help, don'ts, emergencies */
+  --color-paper: #FFFFFF;    /* card surface / light text on dark */
+  --color-steel: #7A7A8C;    /* metadata, captions, citations */
+
+  /* Added */
+  --color-canvas: #F3F3F7;   /* page background — cool off-white */
+  --color-violet: #6D4AFF;   /* accent — before-you-go, highlights */
+  --color-mint: #00C9A0;     /* medical */
+  --color-inklift: #1E1E33;  /* raised dark surface, for gradients */
+
+  /* Radii — rounded is the single biggest "modern app" signal */
+  --radius-card: 22px;
+  --radius-chip: 999px;
 
   /* Fonts */
   --font-sans: "Archivo", "Noto Sans Devanagari", system-ui, sans-serif;
@@ -99,7 +113,7 @@ html {
 }
 
 body {
-  background-color: var(--color-paper);
+  background-color: var(--color-canvas);
   color: var(--color-ink);
   font-family: var(--font-sans);
   font-weight: 400;
@@ -140,4 +154,27 @@ input[type="reset"] {
     transition-delay: 0ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+
+/* --- Elevation + press feedback ----------------------------------------- */
+.card-shadow {
+  box-shadow:
+    0 1px 2px rgba(13, 13, 20, 0.06),
+    0 8px 20px -6px rgba(13, 13, 20, 0.14);
+}
+.card-shadow-lg {
+  box-shadow:
+    0 2px 4px rgba(13, 13, 20, 0.08),
+    0 16px 32px -10px rgba(13, 13, 20, 0.22);
+}
+/* Tap feedback: a button should visibly answer a finger. */
+.pressable {
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.pressable:active {
+  transform: scale(0.978);
+}
+@media (prefers-reduced-motion: reduce) {
+  .pressable:active { transform: none; }
 }
