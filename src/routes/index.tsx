@@ -125,7 +125,7 @@ function Index() {
   const { lang, setLang, t } = useLang();
   const offlineReady = useOfflineReadyBar();
 
-  const targets = ["/rights", "/detained", "/legal", "/medical"] as const;
+  const targets = ["/rights", "/detained", "/medical", "/legal"] as const;
 
   return (
     <div className="min-h-dvh bg-canvas">
@@ -201,7 +201,7 @@ function Index() {
           </span>
         </Link>
 
-        <div className="card-shadow mt-5 flex items-center justify-between rounded-chip bg-paper px-2 py-1.5">
+        <div className="card-shadow mt-5 flex items-center justify-center gap-1 self-center rounded-chip bg-paper px-2 py-1.5">
           <div
             role="group"
             aria-label="Language"
@@ -220,13 +220,6 @@ function Index() {
               code="hi"
             />
           </div>
-          <Link
-            to="/settings"
-            className="min-h-0 px-3 font-mono text-[13px] text-steel underline underline-offset-2"
-            style={{ minHeight: 0 }}
-          >
-            {t(home, "settings")}
-          </Link>
         </div>
       </div>
 
