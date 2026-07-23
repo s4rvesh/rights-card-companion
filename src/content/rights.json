@@ -1,11 +1,38 @@
 [
   {
+    "id": "assembly",
+    "title_en": "You may protest peacefully",
+    "title_hi": "[HI PENDING]",
+    "body_en": "Peaceful assembly and free expression are constitutional rights. Gathering to protest, without weapons and without violence, is protected.",
+    "body_hi": "[HI PENDING]",
+    "source": "Constitution Art. 19(1)(a),(b)",
+    "law": [
+      {
+        "code": "Constitution, Article 19(1)",
+        "text": "All citizens shall have the right— (a) to freedom of speech and expression; (b) to assemble peaceably and without arms;",
+        "verbatim": true
+      }
+    ]
+  },
+  {
     "id": "grounds",
     "title_en": "You must be told why",
-    "title_hi": "[HI PENDING] आपको कारण बताया जाना चाहिए",
+    "title_hi": "[HI PENDING]",
     "body_en": "The police must tell you the grounds for your arrest. Ask clearly: what am I being arrested for? They have to answer.",
     "body_hi": "[HI PENDING]",
-    "source": "BNSS s.47(1) · Constitution Art. 22(1)"
+    "source": "Constitution Art. 22(1) · BNSS s.47(1)",
+    "law": [
+      {
+        "code": "Constitution, Article 22(1)",
+        "text": "No person who is arrested shall be detained in custody without being informed, as soon as may be, of the grounds for such arrest nor shall he be denied the right to consult, and to be defended by, a legal practitioner of his choice.",
+        "verbatim": true
+      },
+      {
+        "code": "BNSS s.47(1)",
+        "text": "The officer making an arrest must communicate the full particulars of the offence and the grounds of arrest to the person arrested.",
+        "verbatim": false
+      }
+    ]
   },
   {
     "id": "bail",
@@ -13,7 +40,14 @@
     "title_hi": "[HI PENDING]",
     "body_en": "If the offence is bailable, the police must tell you that you can be released on bail and can arrange sureties.",
     "body_hi": "[HI PENDING]",
-    "source": "BNSS s.47(2)"
+    "source": "BNSS s.47(2)",
+    "law": [
+      {
+        "code": "BNSS s.47(2)",
+        "text": "Where a person is arrested for a bailable offence, the officer must inform them of their entitlement to be released on bail and to arrange sureties.",
+        "verbatim": false
+      }
+    ]
   },
   {
     "id": "lawyer",
@@ -21,7 +55,24 @@
     "title_hi": "[HI PENDING]",
     "body_en": "You have the right to meet a lawyer of your choice during questioning. If you cannot afford one, the state must provide free legal aid.",
     "body_hi": "[HI PENDING]",
-    "source": "BNSS s.38, s.341 · Constitution Art. 22(1), 39A"
+    "source": "Constitution Art. 22(1), 21 · BNSS s.38, s.341",
+    "law": [
+      {
+        "code": "Constitution, Article 22(1)",
+        "text": "No person who is arrested shall ... be denied the right to consult, and to be defended by, a legal practitioner of his choice.",
+        "verbatim": true
+      },
+      {
+        "code": "Constitution, Article 21",
+        "text": "No person shall be deprived of his life or personal liberty except according to procedure established by law.",
+        "verbatim": true
+      },
+      {
+        "code": "BNSS s.38, s.341",
+        "text": "You may meet an advocate of your choice during interrogation; if you cannot afford one, the court must provide counsel at state expense.",
+        "verbatim": false
+      }
+    ]
   },
   {
     "id": "inform",
@@ -29,7 +80,14 @@
     "title_hi": "[HI PENDING]",
     "body_en": "The police must inform a relative or friend of your choice that you have been arrested, and where you are being held.",
     "body_hi": "[HI PENDING]",
-    "source": "BNSS s.48"
+    "source": "BNSS s.48",
+    "law": [
+      {
+        "code": "BNSS s.48",
+        "text": "The arresting officer must immediately inform a nominated relative or friend of the arrest and the place of detention.",
+        "verbatim": false
+      }
+    ]
   },
   {
     "id": "magistrate",
@@ -37,7 +95,19 @@
     "title_hi": "[HI PENDING]",
     "body_en": "You cannot be held longer than 24 hours (not counting travel time) without being produced before a magistrate.",
     "body_hi": "[HI PENDING]",
-    "source": "BNSS s.58 · Constitution Art. 22(2) · VERIFY SECTION NO."
+    "source": "Constitution Art. 22(2) · BNSS s.58",
+    "law": [
+      {
+        "code": "Constitution, Article 22(2)",
+        "text": "Every person who is arrested and detained in custody shall be produced before the nearest magistrate within a period of twenty-four hours of such arrest excluding the time necessary for the journey from the place of arrest to the court of the magistrate and no such person shall be detained in custody beyond the said period without the authority of a magistrate.",
+        "verbatim": true
+      },
+      {
+        "code": "BNSS s.58",
+        "text": "A person arrested without a warrant may not be detained more than 24 hours without being produced before a magistrate, excluding reasonable travel time.",
+        "verbatim": false
+      }
+    ]
   },
   {
     "id": "force",
@@ -45,15 +115,34 @@
     "title_hi": "[HI PENDING]",
     "body_en": "Police may not use more restraint than is necessary to stop you escaping. Routine handcuffing is not allowed.",
     "body_hi": "[HI PENDING]",
-    "source": "BNSS s.46 · D.K. Basu (1997)"
+    "source": "BNSS s.46 · D.K. Basu (1997)",
+    "law": [
+      {
+        "code": "BNSS s.46",
+        "text": "The person making an arrest shall not use more restraint than is necessary to prevent escape.",
+        "verbatim": false
+      },
+      {
+        "code": "Prem Shankar Shukla v. Delhi Admin. (1980)",
+        "text": "The Supreme Court held routine handcuffing to be prima facie inhuman and unconstitutional; restraint must be justified case by case.",
+        "verbatim": false
+      }
+    ]
   },
   {
     "id": "women",
     "title_en": "Extra protections for women",
     "title_hi": "[HI PENDING]",
-    "body_en": "A woman should not be arrested between sunset and sunrise except in exceptional cases with a magistrate's prior permission. Only a woman officer may make the arrest.",
+    "body_en": "As a rule, a woman should not be arrested between sunset and sunrise. Any exception needs a woman officer and a magistrate's prior permission.",
     "body_hi": "[HI PENDING]",
-    "source": "BNSS s.43 · VERIFY SUBSECTION"
+    "source": "BNSS s.43(5)",
+    "law": [
+      {
+        "code": "BNSS s.43(5)",
+        "text": "As a rule no woman shall be arrested after sunset and before sunrise; in exceptional cases a woman officer must make a written report and obtain the prior permission of the Judicial Magistrate first class.",
+        "verbatim": false
+      }
+    ]
   },
   {
     "id": "silent",
@@ -61,6 +150,18 @@
     "title_hi": "[HI PENDING]",
     "body_en": "Say your name. You are not required to answer questions that could be used against you. Do not sign anything you have not read.",
     "body_hi": "[HI PENDING]",
-    "source": "Constitution Art. 20(3)"
+    "source": "Constitution Art. 20(3)",
+    "law": [
+      {
+        "code": "Constitution, Article 20(3)",
+        "text": "No person accused of any offence shall be compelled to be a witness against himself.",
+        "verbatim": true
+      },
+      {
+        "code": "BSA s.23",
+        "text": "A confession made to a police officer is generally not admissible against the accused.",
+        "verbatim": false
+      }
+    ]
   }
 ]
