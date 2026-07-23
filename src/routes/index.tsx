@@ -51,31 +51,42 @@ function Index() {
 
   // Size ladder — rights is largest per spec, remaining three step down.
   const sizes: Record<string, string> = {
-    rights: "text-[14vw] leading-none",
-    detained: "text-[9vw] leading-none",
-    legal: "text-[12vw] leading-none",
-    medical: "text-[12vw] leading-none",
+    rights: "text-[11vw] leading-none",
+    detained: "text-[7vw] leading-none",
+    legal: "text-[9.5vw] leading-none",
+    medical: "text-[9.5vw] leading-none",
   };
 
   const targets = ["/rights", "/detained", "/legal", "/medical"] as const;
 
   return (
     <div className="fixed inset-0 flex flex-col overflow-hidden bg-paper">
-      <nav
-        aria-label="Primary"
-        className="flex flex-1 flex-col"
-        style={{ height: "calc(100vh - 44px)" }}
-      >
+      <blockquote className="shrink-0 bg-ink px-4 py-3 text-paper">
+        <p className="font-sans text-[13px] italic leading-snug">
+          “{t(home, "quote")}”
+        </p>
+        <footer className="pt-1 font-mono text-[10px] uppercase tracking-wide text-steel">
+          {t(home, "quote_source")}
+        </footer>
+      </blockquote>
+      <nav aria-label="Primary" className="flex flex-1 flex-col">
         {home.buttons.map((btn, i) => (
           <Link
             key={btn.id}
             to={targets[i]}
-            className={`flex flex-1 items-center justify-center px-4 font-display font-extrabold uppercase tracking-tight min-h-[25vh] ${styles[btn.id].className} ${sizes[btn.id]}`}
+            className={`flex flex-1 items-center justify-center px-4 font-display font-extrabold uppercase tracking-tight ${styles[btn.id].className} ${sizes[btn.id]}`}
           >
             {t(btn, "label")}
           </Link>
         ))}
       </nav>
+      <Link
+        to="/before"
+        className="flex h-[58px] shrink-0 items-center justify-between border-t-2 border-ink bg-paper px-4 font-display text-[18px] font-extrabold uppercase tracking-tight text-ink"
+      >
+        {t(home, "before")}
+        <span aria-hidden className="font-mono text-[18px] text-steel">→</span>
+      </Link>
       <div className="flex h-[44px] shrink-0 items-center justify-between border-t-2 border-ink bg-paper px-3 text-ink">
         <div
           role="group"
