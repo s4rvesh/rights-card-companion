@@ -25,101 +25,219 @@ export const Route = createFileRoute("/")({
   component: Index,
 });
 
+/* Per-card skin. Gradients are two-stop and shallow — enough to give the
+   surface depth without hurting the contrast the labels need. */
+const SKINS: Record<
+  string,
+  { bg: string; label: string; sub: string; chip: string }
+> = {
+  rights: {
+    bg: "bg-[linear-gradient(145deg,#FFEE55_0%,#FFE600_45%,#FFC400_100%)]",
+    label: "text-ink",
+    sub: "text-ink/65",
+    chip: "bg-ink/10 text-ink",
+  },
+  detained: {
+    bg: "bg-[linear-gradient(145deg,#2A2A47_0%,#1E1E33_50%,#0D0D14_100%)]",
+    label: "text-paper",
+    sub: "text-paper/60",
+    chip: "bg-paper/15 text-paper",
+  },
+  legal: {
+    bg: "bg-[linear-gradient(145deg,#FF5C74_0%,#FF2E4C_50%,#DB0B2C_100%)]",
+    label: "text-paper",
+    sub: "text-paper/70",
+    chip: "bg-paper/20 text-paper",
+  },
+  medical: {
+    bg: "bg-[linear-gradient(145deg,#2BE3BC_0%,#00C9A0_50%,#00A183_100%)]",
+    label: "text-ink",
+    sub: "text-ink/60",
+    chip: "bg-ink/10 text-ink",
+  },
+};
+
+function Glyph({ id }: { id: string }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-6 w-6"
+      aria-hidden
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      {id === "rights" && (
+        <>
+          <path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z" />
+          <path d="M9.5 12l1.8 1.8L15 10" />
+        </>
+      )}
+      {id === "detained" && (
+        <>
+          <circle cx="8" cy="12" r="3.2" />
+          <circle cx="16" cy="12" r="3.2" />
+          <path d="M11.2 12h1.6" />
+        </>
+      )}
+      {id === "legal" && (
+        <>
+          <path d="M12 4v16M6 8h12" />
+          <path d="M6 8l-2.5 5h5zM18 8l-2.5 5h5z" />
+        </>
+      )}
+      {id === "medical" && (
+        <>
+          <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+          <path d="M12 8v8M8 12h8" />
+        </>
+      )}
+      {id === "before" && (
+        <>
+          <path d="M6 3.5h9l4 4V20a1 1 0 01-1 1H6a1 1 0 01-1-1V4.5a1 1 0 011-1z" />
+          <path d="M8.5 12.5l2 2 4-4.5" />
+        </>
+      )}
+    </svg>
+  );
+}
+
+function Arrow() {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      className="h-5 w-5"
+      aria-hidden
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={2.4}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M5 12h13M12.5 6l6 6-6 6" />
+    </svg>
+  );
+}
+
 function Index() {
   const { lang, setLang, t } = useLang();
   const offlineReady = useOfflineReadyBar();
 
-  // Four full-height stacked buttons. Order matches home.buttons; styling
-  // per index below to satisfy the palette-only rule.
-  const styles: Record<
-    string,
-    { className: string }
-  > = {
-    rights: {
-      className: "bg-hivis text-ink",
-    },
-    detained: {
-      className: "bg-ink text-paper",
-    },
-    legal: {
-      className: "bg-alert text-paper",
-    },
-    medical: {
-      className: "bg-paper text-ink border-y-2 border-ink",
-    },
-  };
-
-  // Size ladder — rights is largest per spec, remaining three step down.
-  const sizes: Record<string, string> = {
-    rights: "text-[11vw] leading-none",
-    detained: "text-[7vw] leading-none",
-    legal: "text-[9.5vw] leading-none",
-    medical: "text-[9.5vw] leading-none",
-  };
-
   const targets = ["/rights", "/detained", "/legal", "/medical"] as const;
 
   return (
-    <div className="fixed inset-0 flex flex-col overflow-hidden bg-paper">
-      <blockquote className="shrink-0 bg-ink px-4 py-3 text-paper">
-        <p className="font-sans text-[13px] italic leading-snug">
-          “{t(home, "quote")}”
-        </p>
-        <footer className="pt-1 font-mono text-[10px] uppercase tracking-wide text-steel">
-          {t(home, "quote_source")}
-        </footer>
-      </blockquote>
-      <nav aria-label="Primary" className="flex flex-1 flex-col">
-        {home.buttons.map((btn, i) => (
-          <Link
-            key={btn.id}
-            to={targets[i]}
-            className={`flex flex-1 items-center justify-center px-4 font-display font-extrabold uppercase tracking-tight ${styles[btn.id].className} ${sizes[btn.id]}`}
-          >
-            {t(btn, "label")}
-          </Link>
-        ))}
-      </nav>
-      <Link
-        to="/before"
-        className="flex h-[58px] shrink-0 items-center justify-between border-t-2 border-ink bg-paper px-4 font-display text-[18px] font-extrabold uppercase tracking-tight text-ink"
-      >
-        {t(home, "before")}
-        <span aria-hidden className="font-mono text-[18px] text-steel">→</span>
-      </Link>
-      <div className="flex h-[44px] shrink-0 items-center justify-between border-t-2 border-ink bg-paper px-3 text-ink">
-        <div
-          role="group"
-          aria-label="Language"
-          className="flex items-center font-mono text-sm"
-        >
-          <LangButton
-            active={lang === "en"}
-            onClick={() => setLang("en")}
-            label={home.lang_en_label}
-            code="en"
+    <div className="min-h-dvh bg-canvas">
+      <div className="mx-auto flex max-w-lg flex-col px-4 pb-6 pt-5">
+        <section className="card-shadow-lg relative overflow-hidden rounded-card bg-[linear-gradient(150deg,#2A2A47_0%,#16162A_55%,#0D0D14_100%)] px-5 py-6">
+          <div
+            aria-hidden
+            className="absolute -right-10 -top-12 h-36 w-36 rounded-full bg-hivis/20 blur-2xl"
           />
-          <span aria-hidden className="px-1">/</span>
-          <LangButton
-            active={lang === "hi"}
-            onClick={() => setLang("hi")}
-            label={home.lang_hi_label}
-            code="hi"
+          <div
+            aria-hidden
+            className="absolute -bottom-14 -left-8 h-32 w-32 rounded-full bg-violet/25 blur-2xl"
           />
-        </div>
+          <p className="relative font-display text-[27px] font-extrabold leading-[1.1] tracking-tight text-hivis">
+            {t(home, "tagline")}
+          </p>
+          <p className="relative mt-3 font-sans text-[13px] italic leading-snug text-paper/70">
+            “{t(home, "quote")}”
+          </p>
+          <p className="relative mt-2 font-mono text-[10px] uppercase tracking-wide text-steel">
+            {t(home, "quote_source")}
+          </p>
+        </section>
+
+        <nav aria-label="Primary" className="mt-4 flex flex-col gap-3">
+          {home.buttons.map((btn, i) => {
+            const skin = SKINS[btn.id];
+            return (
+              <Link
+                key={btn.id}
+                to={targets[i]}
+                className={`pressable card-shadow flex items-center gap-4 rounded-card px-5 py-5 ${skin.bg}`}
+              >
+                <span
+                  className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-chip ${skin.chip}`}
+                >
+                  <Glyph id={btn.id} />
+                </span>
+                <span className="min-w-0 flex-1">
+                  <span
+                    className={`block font-display text-[21px] font-extrabold uppercase leading-tight tracking-tight ${skin.label}`}
+                  >
+                    {t(btn, "label")}
+                  </span>
+                  <span
+                    className={`mt-0.5 block font-sans text-[13px] leading-snug ${skin.sub}`}
+                  >
+                    {t(btn, "sub")}
+                  </span>
+                </span>
+                <span className={skin.label}>
+                  <Arrow />
+                </span>
+              </Link>
+            );
+          })}
+        </nav>
+
         <Link
-          to="/settings"
-          className="font-mono text-sm underline underline-offset-2 min-h-0"
-          style={{ minHeight: 0 }}
+          to="/before"
+          className="pressable card-shadow mt-3 flex items-center gap-4 rounded-card border-2 border-violet/25 bg-paper px-5 py-4"
         >
-          {t(home, "settings")}
+          <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-chip bg-violet/10 text-violet">
+            <Glyph id="before" />
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block font-display text-[18px] font-extrabold uppercase leading-tight tracking-tight text-ink">
+              {t(home, "before")}
+            </span>
+            <span className="mt-0.5 block font-sans text-[13px] leading-snug text-steel">
+              {t(home, "before_sub")}
+            </span>
+          </span>
+          <span className="text-violet">
+            <Arrow />
+          </span>
         </Link>
+
+        <div className="card-shadow mt-5 flex items-center justify-between rounded-chip bg-paper px-2 py-1.5">
+          <div
+            role="group"
+            aria-label="Language"
+            className="flex items-center font-mono text-sm"
+          >
+            <LangButton
+              active={lang === "en"}
+              onClick={() => setLang("en")}
+              label={home.lang_en_label}
+              code="en"
+            />
+            <LangButton
+              active={lang === "hi"}
+              onClick={() => setLang("hi")}
+              label={home.lang_hi_label}
+              code="hi"
+            />
+          </div>
+          <Link
+            to="/settings"
+            className="min-h-0 px-3 font-mono text-[13px] text-steel underline underline-offset-2"
+            style={{ minHeight: 0 }}
+          >
+            {t(home, "settings")}
+          </Link>
+        </div>
       </div>
+
       {offlineReady ? (
         <div
           role="status"
           aria-live="polite"
-          className="fixed inset-x-0 bottom-0 z-50 bg-ink px-4 py-3 text-center font-mono text-sm text-hivis"
+          className="card-shadow-lg fixed inset-x-3 bottom-3 z-50 rounded-chip bg-ink px-4 py-3 text-center font-mono text-sm text-hivis"
         >
           {t(home, "offline_ready")}
         </div>
@@ -171,7 +289,9 @@ function LangButton({
       onClick={onClick}
       aria-pressed={active}
       aria-label={code}
-      className={`min-h-0 px-2 py-1 ${active ? "font-bold text-ink" : "text-steel"}`}
+      className={`min-h-0 rounded-chip px-3 py-1.5 text-[13px] ${
+        active ? "bg-ink font-bold text-paper" : "text-steel"
+      }`}
       style={{ minHeight: 0 }}
     >
       {label}
