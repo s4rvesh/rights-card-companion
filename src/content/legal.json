@@ -10,5 +10,12 @@
   "select_state_en": "Select your state",
   "select_state_hi": "अपना राज्य चुनें",
   "all_states_en": "All states",
-  "all_states_hi": "सभी राज्य"
+  "all_states_hi": "सभी राज्य",
+  "empty_title_en": "Legal aid numbers coming soon",
+  "empty_title_hi": "कानूनी सहायता नंबर जल्द ही",
+  "empty_body_en": "We are working on verified legal aid contacts and will add them here soon. Until then, write an emergency contact number on your arm before you go.",
+  "empty_body_hi": "हम सत्यापित कानूनी सहायता संपर्कों पर काम कर रहे हैं और उन्हें जल्द ही यहाँ जोड़ेंगे। तब तक, जाने से पहले अपनी बांह पर एक आपातकालीन संपर्क नंबर लिखें।",
+  "contribute_en": "Have a legal aid contact we should add? Email us.",
+  "contribute_hi": "कोई कानूनी सहायता संपर्क जोड़ना चाहते हैं? हमें ईमेल करें।",
+  "email": "contact@right2protest.in"
 }

@@ -17,24 +17,22 @@
       "sub_hi": "पहला घंटा, कदम दर कदम"
     },
     {
-      "id": "legal",
-      "to": "/legal",
-      "label_en": "LEGAL HELP",
-      "label_hi": "कानूनी मदद",
-      "sub_en": "Free legal aid numbers",
-      "sub_hi": "निःशुल्क कानूनी सहायता नंबर"
-    },
-    {
       "id": "medical",
       "to": "/medical",
       "label_en": "MEDICAL",
       "label_hi": "चिकित्सा",
       "sub_en": "Heat, tear gas, injury",
       "sub_hi": "गर्मी, आँसू गैस, चोट"
+    },
+    {
+      "id": "legal",
+      "to": "/legal",
+      "label_en": "LEGAL HELP",
+      "label_hi": "कानूनी मदद",
+      "sub_en": "Free legal aid numbers",
+      "sub_hi": "निःशुल्क कानूनी सहायता नंबर"
     }
   ],
-  "settings_en": "Settings",
-  "settings_hi": "सेटिंग्स",
   "lang_en_label": "EN",
   "lang_hi_label": "हिं",
   "offline_ready_en": "Ready to use offline",
