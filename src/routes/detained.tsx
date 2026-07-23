@@ -1,9 +1,8 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import * as AccordionPrimitive from "@radix-ui/react-accordion";
-import detained from "../content/detained.json";
-import meta from "../content/meta.json";
-import type { DetainedStep } from "../content/types";
-import { useLang } from "../i18n/useLang";
+import detained from "@/content/detained.json";
+import type { DetainedStep } from "@/content/types";
+import { useLang } from "@/i18n/useLang";
+import { DisclosureList, DisclosureItem, Block, LawBlock } from "@/components/Disclosure";
 
 export const Route = createFileRoute("/detained")({
   head: () => ({
@@ -12,13 +11,13 @@ export const Route = createFileRoute("/detained")({
       {
         name: "description",
         content:
-          "Ordered checklist of what to do if you are detained by police in India. Offline reference.",
+          "Ordered checklist of what to do if you are detained by police in India, with the legal source for each step. Offline reference.",
       },
       { property: "og:title", content: "I've Been Detained — Rights Card" },
       {
         property: "og:description",
         content:
-          "Ordered checklist of what to do if you are detained by police in India. Offline reference.",
+          "Ordered checklist of what to do if you are detained by police in India, with the legal source for each step. Offline reference.",
       },
     ],
   }),
@@ -27,11 +26,15 @@ export const Route = createFileRoute("/detained")({
 
 const STEPS = detained as DetainedStep[];
 
-// Bilingual banner + CTA label. Kept here rather than a new JSON file so
-// this screen ships without touching the content layout other users edit.
 const COPY = {
+  title_en: "If you are detained",
+  title_hi: "यदि आपको हिरासत में लिया जाए",
   banner_en: "Stay calm. Say your name. Say nothing else about today.",
   banner_hi: "शांत रहें। अपना नाम बताएं। आज के बारे में और कुछ न कहें।",
+  action_en: "What to do",
+  action_hi: "क्या करें",
+  law_en: "The law",
+  law_hi: "कानून",
   cta_en: "Call legal aid",
   cta_hi: "कानूनी सहायता को कॉल करें",
   back_en: "Home",
@@ -42,77 +45,52 @@ function DetainedScreen() {
   const { t } = useLang();
 
   return (
-    <div className="flex min-h-screen flex-col bg-paper text-ink">
-      <div
-        role="note"
-        className="bg-alert px-4 py-2 text-center font-sans font-semibold text-paper"
-        style={{ fontSize: "14px", lineHeight: 1.3 }}
-      >
-        {t(meta, "draft_banner")}
-      </div>
-      <header className="flex items-center gap-3 border-b border-steel px-4 py-3">
-        <Link
-          to="/"
-          aria-label={t(COPY, "back")}
-          className="min-h-0 bg-ink px-2 py-1 font-mono text-xs text-paper"
-          style={{ minHeight: 0 }}
-        >
-          ← {t(COPY, "back")}
-        </Link>
-      </header>
-
-      <p
-        role="note"
-        className="border-b border-steel px-4 py-4 font-sans font-semibold text-alert"
-        style={{ fontSize: "18px", lineHeight: 1.35 }}
-      >
-        {t(COPY, "banner")}
-      </p>
-
-      <AccordionPrimitive.Root type="single" collapsible className="flex-1">
-        {STEPS.map((s) => (
-          <AccordionPrimitive.Item
-            key={s.step}
-            value={`step-${s.step}`}
-            className="border-b border-steel"
+    <div className="flex min-h-dvh flex-col bg-paper text-ink">
+      <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col">
+        <header className="flex items-center justify-between px-4 pt-4">
+          <Link
+            to="/"
+            className="font-sans text-[14px] font-medium uppercase tracking-wide text-steel"
           >
-            <div className="flex">
-              <div
-                aria-hidden
-                className="flex w-[40px] shrink-0 items-start justify-center pt-4 font-display font-extrabold text-steel"
-                style={{ fontSize: "28px", lineHeight: 1 }}
-              >
-                {s.step}
-              </div>
-              <AccordionPrimitive.Header className="flex flex-1">
-                <AccordionPrimitive.Trigger
-                  className="flex flex-1 items-center px-3 py-4 text-left font-display font-bold uppercase tracking-tight"
-                  style={{ fontSize: "18px", minHeight: "3.5rem" }}
-                >
-                  {t(s, "title")}
-                </AccordionPrimitive.Trigger>
-              </AccordionPrimitive.Header>
-            </div>
-            <AccordionPrimitive.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-              <div
-                className="pb-5 pl-[40px] pr-4 font-sans"
-                style={{ fontSize: "17px", lineHeight: 1.45 }}
-              >
-                {t(s, "detail")}
-              </div>
-            </AccordionPrimitive.Content>
-          </AccordionPrimitive.Item>
-        ))}
-      </AccordionPrimitive.Root>
+            ← {t(COPY, "back")}
+          </Link>
+        </header>
 
-      <div className="sticky bottom-0 mt-auto">
-        <Link
-          to="/legal"
-          className="flex w-full items-center justify-center bg-alert px-4 py-5 font-display font-extrabold uppercase tracking-tight text-paper"
-          style={{ fontSize: "22px" }}
+        <h1 className="px-4 pb-4 pt-4 font-display text-[28px] font-extrabold uppercase text-ink">
+          {t(COPY, "title")}
+        </h1>
+
+        <p
+          role="note"
+          className="mx-4 mb-2 border-l-[3px] border-alert pl-4 font-sans text-[18px] font-semibold leading-snug text-alert"
         >
-          {t(COPY, "cta")}
-        </Link>
+          {t(COPY, "banner")}
+        </p>
+
+        <DisclosureList>
+          {STEPS.map((s) => (
+            <DisclosureItem
+              key={s.step}
+              value={`step-${s.step}`}
+              gutter={String(s.step)}
+              title={t(s, "title")}
+            >
+              <Block label={t(COPY, "action")} body={t(s, "detail")} />
+              {s.law && s.law.length > 0 && (
+                <LawBlock label={t(COPY, "law")} law={s.law} />
+              )}
+            </DisclosureItem>
+          ))}
+        </DisclosureList>
+
+        <div className="sticky bottom-0 mt-auto">
+          <Link
+            to="/legal"
+            className="flex w-full items-center justify-center bg-alert px-4 py-5 font-display text-[22px] font-extrabold uppercase tracking-tight text-paper"
+          >
+            {t(COPY, "cta")}
+          </Link>
+        </div>
       </div>
     </div>
   );

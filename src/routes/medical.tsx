@@ -1,12 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import * as AccordionPrimitive from "@radix-ui/react-accordion";
 import { useEffect, useMemo, useState } from "react";
 import medical from "@/content/medical.json";
 import hospitals from "@/content/hospitals.json";
 import copy from "@/content/medicalUi.json";
-import meta from "@/content/meta.json";
 import type { MedicalCard, Hospital } from "@/content/types";
 import { useLang } from "@/i18n/useLang";
+import { DisclosureList, DisclosureItem, Block } from "@/components/Disclosure";
 
 export const Route = createFileRoute("/medical")({
   component: MedicalScreen,
@@ -57,31 +56,6 @@ function PhoneGlyph() {
   );
 }
 
-function Block({
-  label,
-  body,
-  emphasis,
-}: {
-  label: string;
-  body: string;
-  emphasis?: boolean;
-}) {
-  return (
-    <div className={emphasis ? "border-l-[3px] border-alert pl-4" : ""}>
-      <div
-        className={`font-mono text-[11px] uppercase ${
-          emphasis ? "text-alert" : "text-steel"
-        }`}
-      >
-        {label}
-      </div>
-      <div className="pt-1 font-sans text-[18px] leading-snug text-ink">
-        {body}
-      </div>
-    </div>
-  );
-}
-
 function MedicalScreen() {
   const { t } = useLang();
   const [selectedState, setSelectedState] = useState("");
@@ -114,53 +88,33 @@ function MedicalScreen() {
           </Link>
         </header>
 
-        <h1 className="px-4 pt-4 pb-4 font-sans text-[28px] font-extrabold uppercase text-ink">
+        <h1 className="px-4 pb-4 pt-4 font-display text-[28px] font-extrabold uppercase text-ink">
           {t(copy, "title")}
         </h1>
 
-        <AccordionPrimitive.Root type="multiple" className="border-t border-ink">
+        <DisclosureList>
           {cards.map((card) => (
-            <AccordionPrimitive.Item
+            <DisclosureItem
               key={card.id}
               value={card.id}
-              className="border-b border-steel/60"
+              title={t(card, "condition")}
             >
-              <AccordionPrimitive.Header>
-                <AccordionPrimitive.Trigger className="flex w-full items-center justify-between px-4 py-4 text-left font-sans text-[18px] font-semibold uppercase text-ink [&[data-state=open]>span]:rotate-45">
-                  <span className="pr-4">{t(card, "condition")}</span>
-                  <span className="inline-block font-mono text-[20px] text-steel transition-transform">
-                    +
-                  </span>
-                </AccordionPrimitive.Trigger>
-              </AccordionPrimitive.Header>
-              <AccordionPrimitive.Content className="overflow-hidden data-[state=closed]:animate-none data-[state=open]:animate-none">
-                <div className="flex flex-col gap-5 px-4 pb-6">
-                  <Block label={t(copy, "signs")} body={t(card, "signs")} />
-                  <Block label={t(copy, "actions")} body={t(card, "actions")} />
-                  <Block
-                    label={t(copy, "emergency")}
-                    body={t(card, "emergency")}
-                    emphasis
-                  />
-                </div>
-              </AccordionPrimitive.Content>
-            </AccordionPrimitive.Item>
+              <Block label={t(copy, "signs")} body={t(card, "signs")} />
+              <Block label={t(copy, "actions")} body={t(card, "actions")} />
+              <Block
+                label={t(copy, "emergency")}
+                body={t(card, "emergency")}
+                emphasis
+              />
+            </DisclosureItem>
           ))}
-        </AccordionPrimitive.Root>
+        </DisclosureList>
 
-        <section className="pt-8 pb-12">
-          <h2 className="border-b border-ink bg-paper px-4 py-3 font-sans text-[12px] font-bold uppercase tracking-wider text-ink">
+        <section className="pb-12 pt-8">
+          <h2 className="border-b border-ink bg-paper px-4 py-3 font-mono text-[12px] font-bold uppercase tracking-wider text-ink">
             {t(copy, "hospitals")}
             {selectedState ? ` — ${selectedState}` : ""}
           </h2>
-          {allHospitals.length === 0 ? (
-            <div className="flex min-h-[30vh] items-center justify-center px-6">
-              <p className="text-center font-sans text-[16px] leading-snug text-steel">
-                {t(meta, "empty_hospitals")}
-              </p>
-            </div>
-          ) : (
-            <>
           {!selectedState && (
             <p className="px-4 py-4 font-sans text-[15px] leading-snug text-steel">
               {t(copy, "no_state")}
@@ -188,8 +142,6 @@ function MedicalScreen() {
               <PhoneGlyph />
             </a>
           ))}
-            </>
-          )}
         </section>
       </div>
     </div>
