@@ -1,8 +1,10 @@
 {
-  "draft_banner_en": "DRAFT — not yet reviewed by a lawyer. Verify before relying on this.",
-  "draft_banner_hi": "ड्राफ़्ट — अभी तक किसी वकील द्वारा समीक्षित नहीं। भरोसा करने से पहले सत्यापित करें।",
+  "draft_banner_en": "Not legal advice. This information has not yet been reviewed by a lawyer — verify before relying on it.",
+  "draft_banner_hi": "यह कानूनी सलाह नहीं है। इस जानकारी की अभी तक किसी वकील द्वारा समीक्षा नहीं हुई है — भरोसा करने से पहले सत्यापित करें।",
   "empty_legal_en": "Legal aid numbers are being added. For now, write an emergency contact on your arm before you go.",
   "empty_legal_hi": "कानूनी सहायता नंबर जोड़े जा रहे हैं। अभी के लिए, जाने से पहले अपनी बांह पर एक आपातकालीन संपर्क लिखें।",
   "empty_hospitals_en": "Hospital numbers coming soon.",
-  "empty_hospitals_hi": "अस्पताल के नंबर जल्द ही आ रहे हैं।"
+  "empty_hospitals_hi": "अस्पताल के नंबर जल्द ही आ रहे हैं।",
+  "medical_banner_en": "General first aid guidance only. It is not a substitute for a doctor or emergency care.",
+  "medical_banner_hi": "केवल सामान्य प्राथमिक चिकित्सा मार्गदर्शन। यह डॉक्टर या आपातकालीन देखभाल का विकल्प नहीं है।"
 }
