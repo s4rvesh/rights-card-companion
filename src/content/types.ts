@@ -6,14 +6,31 @@
  * to pick the correct one at render time.
  */
 
+/**
+ * A single legal reference shown in the nested "THE LAW" expander.
+ * verbatim=true  → `text` is exact quoted text (used for constitutional
+ *                  articles), rendered as a quote.
+ * verbatim=false → `text` is our plain-language summary of a statute
+ *                  section, rendered plainly and marked "(summary)".
+ */
+export type LawRef = {
+  /** e.g. "Constitution, Article 22(1)" or "BNSS s.47(1)". */
+  code: string;
+  /** Exact quote (verbatim) or plain summary (not verbatim). */
+  text: string;
+  verbatim: boolean;
+};
+
 export type Right = {
   id: string;
   title_en: string;
   title_hi: string;
   body_en: string;
   body_hi: string;
-  /** Short legal citation, e.g. "BNSS s.47(1)". */
+  /** Short legal citation shown on the card, e.g. "BNSS s.47(1)". */
   source: string;
+  /** Optional exact codes + quotes shown in the nested "THE LAW" expander. */
+  law?: LawRef[];
 };
 
 export type DetainedStep = {
@@ -22,6 +39,8 @@ export type DetainedStep = {
   title_hi: string;
   detail_en: string;
   detail_hi: string;
+  /** Optional exact codes + quotes shown in the nested "THE LAW" expander. */
+  law?: LawRef[];
 };
 
 export type LegalAidContact = {
