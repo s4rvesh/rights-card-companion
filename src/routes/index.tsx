@@ -130,23 +130,20 @@ function Index() {
   return (
     <div className="min-h-dvh bg-canvas">
       <div className="mx-auto flex max-w-lg flex-col px-4 pb-6 pt-5">
-        <section className="card-shadow-lg relative overflow-hidden rounded-card bg-[linear-gradient(150deg,#2A2A47_0%,#16162A_55%,#0D0D14_100%)] px-5 py-6">
+        <section className="card-shadow-lg relative overflow-hidden rounded-card bg-[linear-gradient(150deg,#2A2A47_0%,#16162A_55%,#0D0D14_100%)] px-4 py-4">
           <div
             aria-hidden
-            className="absolute -right-10 -top-12 h-36 w-36 rounded-full bg-hivis/20 blur-2xl"
+            className="absolute -right-8 -top-10 h-28 w-28 rounded-full bg-hivis/20 blur-2xl"
           />
           <div
             aria-hidden
-            className="absolute -bottom-14 -left-8 h-32 w-32 rounded-full bg-violet/25 blur-2xl"
+            className="absolute -bottom-10 -left-6 h-24 w-24 rounded-full bg-violet/25 blur-2xl"
           />
-          <p className="relative font-display text-[27px] font-extrabold leading-[1.1] tracking-tight text-hivis">
+          <p className="relative whitespace-nowrap font-display text-[min(5.6vw,25px)] font-extrabold leading-[1.15] tracking-tight text-hivis">
             {t(home, "tagline")}
           </p>
-          <p className="relative mt-3 font-sans text-[13px] italic leading-snug text-paper/70">
-            “{t(home, "quote")}”
-          </p>
-          <p className="relative mt-2 font-mono text-[10px] uppercase tracking-wide text-steel">
-            {t(home, "quote_source")}
+          <p className="relative mt-1.5 font-sans text-[12.5px] leading-snug text-paper/65">
+            {t(home, "quote")}
           </p>
         </section>
 
