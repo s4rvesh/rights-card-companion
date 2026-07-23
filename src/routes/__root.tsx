@@ -78,19 +78,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "theme-color", content: "#F2E205" },
+      { name: "theme-color", content: "#FFE600" },
       { title: "Right2Protest" },
       { name: "description", content: "Offline pocket reference for your rights on arrest, legal aid contacts, and emergency medical guidance in India." },
-      { name: "author", content: "Lovable" },
+      { name: "author", content: "Right2Protest" },
       { property: "og:title", content: "Right2Protest" },
       { property: "og:description", content: "Offline pocket reference for your rights on arrest, legal aid contacts, and emergency medical guidance in India." },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary" },
+      
       { name: "twitter:title", content: "Right2Protest" },
       { name: "twitter:description", content: "Offline pocket reference for your rights on arrest, legal aid contacts, and emergency medical guidance in India." },
-      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6c5d277f-84e7-43c6-90e6-f7ec7acdd850/id-preview-fbbaaf80--98464bff-0866-41d8-b762-8775824ce7e3.lovable.app-1784764378165.png" },
-      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/6c5d277f-84e7-43c6-90e6-f7ec7acdd850/id-preview-fbbaaf80--98464bff-0866-41d8-b762-8775824ce7e3.lovable.app-1784764378165.png" },
+      { property: "og:image", content: "https://right2protest.in/icon-512.png" },
+      { name: "twitter:image", content: "https://right2protest.in/icon-512.png" },
     ],
     links: [
       {
