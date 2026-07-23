@@ -2,9 +2,9 @@
   {
     "id": "assembly",
     "title_en": "You may protest peacefully",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "आप शांतिपूर्ण विरोध कर सकते हैं",
     "body_en": "Peaceful assembly and free expression are constitutional rights. Gathering to protest, without weapons and without violence, is protected.",
-    "body_hi": "[HI PENDING]",
+    "body_hi": "शांति से इकट्ठा होना और अपनी बात कहना आपका संवैधानिक अधिकार है। बिना हथियार और बिना हिंसा के विरोध करना संविधान से संरक्षित है।",
     "source": "Constitution Art. 19(1)(a),(b)",
     "law": [
       {
@@ -17,9 +17,9 @@
   {
     "id": "grounds",
     "title_en": "You must be told why",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "आपको कारण बताया जाना चाहिए",
     "body_en": "The police must tell you the grounds for your arrest. Ask clearly: what am I being arrested for? They have to answer.",
-    "body_hi": "[HI PENDING]",
+    "body_hi": "पुलिस को आपको गिरफ़्तारी का कारण बताना ज़रूरी है। साफ़ पूछें: मुझे किस अपराध में गिरफ़्तार किया जा रहा है? उन्हें जवाब देना होगा।",
     "source": "Constitution Art. 22(1) · BNSS s.47(1)",
     "law": [
       {
@@ -37,9 +37,9 @@
   {
     "id": "bail",
     "title_en": "For a bailable offence, you can be released",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "ज़मानती अपराध में आपको छोड़ा जा सकता है",
     "body_en": "If the offence is bailable, the police must tell you that you can be released on bail and can arrange sureties.",
-    "body_hi": "[HI PENDING]",
+    "body_hi": "अगर अपराध ज़मानती है, तो पुलिस को आपको बताना होगा कि आप ज़मानत पर छूट सकते हैं और ज़मानतदार का इंतज़ाम कर सकते हैं।",
     "source": "BNSS s.47(2)",
     "law": [
       {
@@ -52,9 +52,9 @@
   {
     "id": "lawyer",
     "title_en": "You can meet a lawyer",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "आप वकील से मिल सकते हैं",
     "body_en": "You have the right to meet a lawyer of your choice during questioning. If you cannot afford one, the state must provide free legal aid.",
-    "body_hi": "[HI PENDING]",
+    "body_hi": "पूछताछ के दौरान अपनी पसंद के वकील से मिलना आपका अधिकार है। अगर आप वकील का खर्च नहीं उठा सकते, तो सरकार को मुफ़्त कानूनी सहायता देनी होगी।",
     "source": "Constitution Art. 22(1), 21 · BNSS s.38, s.341",
     "law": [
       {
@@ -77,9 +77,9 @@
   {
     "id": "inform",
     "title_en": "Someone must be told you were taken",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "किसी को बताया जाना चाहिए कि आपको ले जाया गया है",
     "body_en": "The police must inform a relative or friend of your choice that you have been arrested, and where you are being held.",
-    "body_hi": "[HI PENDING]",
+    "body_hi": "पुलिस को आपके किसी रिश्तेदार या दोस्त को बताना होगा कि आपको गिरफ़्तार किया गया है और आपको कहाँ रखा गया है।",
     "source": "BNSS s.48",
     "law": [
       {
@@ -92,9 +92,9 @@
   {
     "id": "magistrate",
     "title_en": "24 hours, then a magistrate",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "24 घंटे, फिर मजिस्ट्रेट",
     "body_en": "You cannot be held longer than 24 hours (not counting travel time) without being produced before a magistrate.",
-    "body_hi": "[HI PENDING]",
+    "body_hi": "मजिस्ट्रेट के सामने पेश किए बिना आपको 24 घंटे से ज़्यादा नहीं रखा जा सकता (आने-जाने का समय इसमें नहीं गिना जाता)।",
     "source": "Constitution Art. 22(2) · BNSS s.58",
     "law": [
       {
@@ -112,9 +112,9 @@
   {
     "id": "force",
     "title_en": "No more force than necessary",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "ज़रूरत से ज़्यादा बल नहीं",
     "body_en": "Police may not use more restraint than is necessary to stop you escaping. Routine handcuffing is not allowed.",
-    "body_hi": "[HI PENDING]",
+    "body_hi": "पुलिस आपको भागने से रोकने के लिए जितना ज़रूरी हो, उससे ज़्यादा बल नहीं लगा सकती। हर बार हथकड़ी लगाना सही नहीं है।",
     "source": "BNSS s.46 · D.K. Basu (1997)",
     "law": [
       {
@@ -132,9 +132,9 @@
   {
     "id": "women",
     "title_en": "Extra protections for women",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "महिलाओं के लिए अतिरिक्त सुरक्षा",
     "body_en": "As a rule, a woman should not be arrested between sunset and sunrise. Any exception needs a woman officer and a magistrate's prior permission.",
-    "body_hi": "[HI PENDING]",
+    "body_hi": "आमतौर पर किसी महिला को सूरज डूबने के बाद और सूरज निकलने से पहले गिरफ़्तार नहीं किया जा सकता। अपवाद में महिला अधिकारी और मजिस्ट्रेट की पहले से अनुमति ज़रूरी है।",
     "source": "BNSS s.43(5)",
     "law": [
       {
@@ -147,9 +147,9 @@
   {
     "id": "silent",
     "title_en": "You do not have to incriminate yourself",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "आपको अपने ख़िलाफ़ गवाही देने की ज़रूरत नहीं",
     "body_en": "Say your name. You are not required to answer questions that could be used against you. Do not sign anything you have not read.",
-    "body_hi": "[HI PENDING]",
+    "body_hi": "अपना नाम बताएं। जो सवाल आपके ख़िलाफ़ इस्तेमाल हो सकते हैं, उनका जवाब देना ज़रूरी नहीं। बिना पढ़े किसी कागज़ पर दस्तख़त न करें।",
     "source": "Constitution Art. 20(3)",
     "law": [
       {

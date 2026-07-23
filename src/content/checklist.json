@@ -3,136 +3,136 @@
     "id": "water",
     "take": true,
     "label_en": "Water — more than you think",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "पानी — जितना सोचें, उससे ज़्यादा",
     "note_en": "You will drink it faster than you expect, and you may end up sharing it.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "आप इसे उम्मीद से जल्दी पी जाएँगे, और शायद किसी और के साथ बाँटना भी पड़े।"
   },
   {
     "id": "ors",
     "take": true,
     "label_en": "ORS sachets, or salt and sugar",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "ओआरएस के पैकेट, या नमक और चीनी",
     "note_en": "Water alone does not replace what you lose sweating in this heat.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "इस गर्मी में सिर्फ़ पानी से वह कमी पूरी नहीं होती जो पसीने से होती है।"
   },
   {
     "id": "food",
     "take": true,
     "label_en": "Food that will not spoil",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "ऐसा खाना जो ख़राब न हो",
     "note_en": "Dry snacks, nuts, biscuits. Something for a friend too.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "सूखा नाश्ता, मेवे, बिस्किट। किसी दोस्त के लिए भी कुछ।"
   },
   {
     "id": "sun",
     "take": true,
     "label_en": "Cap, umbrella, or light long sleeves",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "टोपी, छाता, या हल्की पूरी बाँह",
     "note_en": "Shade you carry with you. Long sleeves in light cotton beat bare arms in direct sun.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "छाया जो आप साथ लेकर चलें। तेज़ धूप में हल्के सूती पूरी बाँह के कपड़े खुली बाँहों से बेहतर हैं।"
   },
   {
     "id": "firstaid",
     "take": true,
     "label_en": "Small first aid kit",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "छोटी फ़र्स्ट एड किट",
     "note_en": "Bandages, antiseptic, gauze, and a clean cloth. Enough to stop bleeding and cover a wound.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "पट्टी, एंटीसेप्टिक, गॉज़ और एक साफ़ कपड़ा। इतना कि खून रोका जा सके और घाव ढका जा सके।"
   },
   {
     "id": "meds",
     "take": true,
     "label_en": "Your own medication, plus extra",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "अपनी दवाई, थोड़ी ज़्यादा",
     "note_en": "Carry more than one day's worth in case you cannot get home. If you use an inhaler, bring it and keep it on you, not in a bag you might lose.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "एक दिन से ज़्यादा की दवा रखें, अगर घर न पहुँच पाएँ। इनहेलर लेते हैं तो उसे अपने पास रखें, उस बैग में नहीं जो खो सकता है।"
   },
   {
     "id": "glasses",
     "take": true,
     "label_en": "Glasses, not contact lenses",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "चश्मा, कॉन्टैक्ट लेंस नहीं",
     "note_en": "Tear gas gets trapped under a lens against your eye. Wear glasses if you can.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "आँसू गैस लेंस के नीचे फँसकर आँख पर टिकी रह जाती है। हो सके तो चश्मा पहनें।"
   },
   {
     "id": "cloth",
     "take": true,
     "label_en": "A scarf or cloth, and clean water for eyes",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "एक स्कार्फ़ या कपड़ा, और आँखों के लिए साफ़ पानी",
     "note_en": "A separate small bottle kept clean, so you can flush your eyes without using your drinking water.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "अलग से एक छोटी बोतल साफ़ रखें, ताकि पीने का पानी इस्तेमाल किए बिना आँखें धो सकें।"
   },
   {
     "id": "phone",
     "take": true,
     "label_en": "Charged phone and a power bank",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "चार्ज किया हुआ फ़ोन और पावर बैंक",
     "note_en": "Turn the brightness down and close what you are not using. Heat drains batteries fast.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "स्क्रीन की रोशनी कम रखें और जो इस्तेमाल नहीं कर रहे उसे बंद करें। गर्मी में बैटरी जल्दी ख़त्म होती है।"
   },
   {
     "id": "marker",
     "take": true,
     "label_en": "Permanent marker",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "परमानेंट मार्कर",
     "note_en": "For writing an emergency number on your arm, and on a friend's.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "अपनी और दोस्त की बाँह पर आपातकालीन नंबर लिखने के लिए।"
   },
   {
     "id": "cash",
     "take": true,
     "label_en": "Some cash for transport",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "आने-जाने के लिए कुछ नकद",
     "note_en": "Enough to get home. Digital payments fail when the network is shut down.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "घर पहुँचने भर का। नेटवर्क बंद होने पर डिजिटल पेमेंट काम नहीं करता।"
   },
   {
     "id": "id",
     "take": true,
     "label_en": "Your ID",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "अपना पहचान पत्र",
     "note_en": "Being able to establish who you are is usually helpful, including to whoever is trying to find you.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "यह बता पाना कि आप कौन हैं आमतौर पर काम आता है — उनके लिए भी जो आपको ढूंढ रहे हों।"
   },
   {
     "id": "no-contacts",
     "take": false,
     "label_en": "Contact lenses",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "कॉन्टैक्ट लेंस",
     "note_en": "Tear gas gets trapped underneath and keeps burning. Wear glasses instead.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "आँसू गैस नीचे फँसकर जलाती रहती है। इसकी जगह चश्मा पहनें।"
   },
   {
     "id": "no-oil",
     "take": false,
     "label_en": "Oil-based lotion, moisturiser or makeup",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "तेल वाला लोशन, मॉइस्चराइज़र या मेकअप",
     "note_en": "Tear gas powder sticks to oil and stays on your skin. Go with a clean, dry face.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "आँसू गैस का पाउडर तेल से चिपक जाता है और त्वचा पर बना रहता है। चेहरा साफ़ और सूखा रखें।"
   },
   {
     "id": "no-weapon",
     "take": false,
     "label_en": "Anything sharp, or anything that could be called a weapon",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "कोई नुकीली चीज़, या ऐसी चीज़ जिसे हथियार कहा जा सके",
     "note_en": "The right to assemble is protected when it is peaceful and without arms. Do not give anyone a reason to say otherwise.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "इकट्ठा होने का अधिकार तभी संरक्षित है जब वह शांतिपूर्ण और बिना हथियार हो। किसी को उल्टा कहने का मौका न दें।"
   },
   {
     "id": "no-valuables",
     "take": false,
     "label_en": "Valuables you cannot afford to lose",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "क़ीमती चीज़ें जिनका खोना आप बर्दाश्त न कर सकें",
     "note_en": "Things get dropped, crushed, and taken. Bring only what you can walk away without.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "चीज़ें गिरती हैं, टूटती हैं और खो जाती हैं। सिर्फ़ वही लाएँ जिसके बिना आप लौट सकें।"
   },
   {
     "id": "no-substances",
     "take": false,
     "label_en": "Alcohol or anything illegal",
-    "label_hi": "[HI PENDING]",
+    "label_hi": "शराब या कोई ग़ैरक़ानूनी चीज़",
     "note_en": "It slows your judgement when you need it most, and hands over an easy separate charge.",
-    "note_hi": "[HI PENDING]"
+    "note_hi": "यह ठीक उसी वक़्त आपकी समझ कमज़ोर करती है जब उसकी सबसे ज़्यादा ज़रूरत है, और अलग से केस बनाने का आसान मौका दे देती है।"
   }
 ]

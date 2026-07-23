@@ -2,9 +2,9 @@
   {
     "step": 1,
     "title_en": "Stay calm. Say your name.",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "शांत रहें। अपना नाम बताएं।",
     "detail_en": "Give your name. Do not argue, run, or say anything else about the day. Staying calm keeps you safer.",
-    "detail_hi": "[HI PENDING]",
+    "detail_hi": "अपना नाम बताएं। बहस न करें, भागें नहीं, और आज के बारे में और कुछ न कहें। शांत रहना आपको ज़्यादा सुरक्षित रखता है।",
     "law": [
       {
         "code": "Constitution, Article 20(3)",
@@ -16,9 +16,9 @@
   {
     "step": 2,
     "title_en": "Ask what you are being arrested for.",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "पूछें कि आपको किस लिए गिरफ़्तार किया जा रहा है।",
     "detail_en": "You are entitled to be told the grounds. Ask clearly and remember what they say.",
-    "detail_hi": "[HI PENDING]",
+    "detail_hi": "आपको कारण जानने का हक़ है। साफ़ पूछें और जो वे कहें उसे याद रखें।",
     "law": [
       {
         "code": "Constitution, Article 22(1)",
@@ -35,9 +35,9 @@
   {
     "step": 3,
     "title_en": "Ask to make a call. Call legal aid first.",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "फ़ोन करने को कहें। पहले कानूनी सहायता को कॉल करें।",
     "detail_en": "Someone must be informed of your arrest. Call a legal aid number before anyone else — they can act fastest.",
-    "detail_hi": "[HI PENDING]",
+    "detail_hi": "आपकी गिरफ़्तारी की जानकारी किसी को दी जानी चाहिए। सबसे पहले कानूनी सहायता नंबर पर कॉल करें — वे सबसे तेज़ी से कुछ कर सकते हैं।",
     "law": [
       {
         "code": "BNSS s.48",
@@ -49,9 +49,9 @@
   {
     "step": 4,
     "title_en": "Ask to speak to a lawyer.",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "वकील से बात करने को कहें।",
     "detail_en": "You have the right to meet a lawyer of your choice. If you cannot afford one, free legal aid is your right.",
-    "detail_hi": "[HI PENDING]",
+    "detail_hi": "अपनी पसंद के वकील से मिलना आपका अधिकार है। अगर आप खर्च नहीं उठा सकते, तो मुफ़्त कानूनी सहायता आपका हक़ है।",
     "law": [
       {
         "code": "Constitution, Article 22(1)",
@@ -68,9 +68,9 @@
   {
     "step": 5,
     "title_en": "Do not sign anything unread.",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "बिना पढ़े किसी कागज़ पर दस्तख़त न करें।",
     "detail_en": "Read anything before signing. You are not required to sign a statement you disagree with or have not read.",
-    "detail_hi": "[HI PENDING]",
+    "detail_hi": "दस्तख़त करने से पहले पढ़ें। जिस बयान से आप सहमत नहीं हैं या जिसे आपने पढ़ा नहीं है, उस पर दस्तख़त करना ज़रूरी नहीं।",
     "law": [
       {
         "code": "Constitution, Article 20(3)",
@@ -87,9 +87,9 @@
   {
     "step": 6,
     "title_en": "If you are hurt, say so and ask for a doctor.",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "चोट लगी हो तो कहें और डॉक्टर मांगें।",
     "detail_en": "You can ask to be examined by a medical practitioner. Say out loud if you are injured.",
-    "detail_hi": "[HI PENDING]",
+    "detail_hi": "आप डॉक्टर से जांच कराने की मांग कर सकते हैं। अगर आपको चोट लगी है तो साफ़ आवाज़ में बताएं।",
     "law": [
       {
         "code": "BNSS s.53",
@@ -101,9 +101,9 @@
   {
     "step": 7,
     "title_en": "Note the officer's name and number.",
-    "title_hi": "[HI PENDING]",
+    "title_hi": "अधिकारी का नाम और नंबर नोट करें।",
     "detail_en": "Officers must wear visible identification. Remember or write down the name and badge number.",
-    "detail_hi": "[HI PENDING]",
+    "detail_hi": "अधिकारियों को अपनी पहचान साफ़ दिखानी होती है। नाम और बैज नंबर याद रखें या लिख लें।",
     "law": [
       {
         "code": "BNSS s.36 · D.K. Basu (1997)",

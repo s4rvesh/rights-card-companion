@@ -2,67 +2,67 @@
   {
     "id": "heatstroke",
     "condition_en": "Heatstroke",
-    "condition_hi": "[HI PENDING] लू लगना / हीटस्ट्रोक",
+    "condition_hi": "लू लगना (हीटस्ट्रोक)",
     "signs_en": "Hot, flushed, dry skin. Sweating may have stopped. Confusion, restlessness, headache, fast heartbeat. Body feels very hot to touch. May collapse or have a seizure.",
-    "signs_hi": "[HI PENDING]",
+    "signs_hi": "गर्म, लाल, सूखी त्वचा। पसीना आना बंद हो सकता है। भ्रम, बेचैनी, सिरदर्द, तेज़ धड़कन। शरीर छूने पर बहुत गर्म लगता है। बेहोशी या दौरा पड़ सकता है।",
     "actions_en": "Move them to a cool, shaded place at once. Remove outer clothing. Cool them fast: wrap in a wet sheet and keep pouring cool water over it, or fan and sponge with cool water. Put cold packs at the neck, armpits and groin. If they are alert and can swallow, give sips of cool water. Keep cooling until they no longer feel hot.",
-    "actions_hi": "[HI PENDING]",
+    "actions_hi": "उन्हें तुरंत ठंडी, छायादार जगह पर ले जाएँ। ऊपर के कपड़े हटाएँ। तेज़ी से ठंडा करें: गीली चादर लपेटें और उस पर ठंडा पानी डालते रहें, या पंखा करें और ठंडे पानी से पोंछें। गर्दन, बगल और जांघों के बीच ठंडी पट्टी रखें। अगर वे होश में हैं और निगल सकते हैं, तो घूंट-घूंट ठंडा पानी दें। जब तक शरीर की गर्मी कम न हो, ठंडा करते रहें।",
     "emergency_en": "This is a medical emergency. Get them to a hospital or call for help immediately. If they are confused, unconscious, or having a seizure, that is life-threatening — do not wait.",
-    "emergency_hi": "[HI PENDING]"
+    "emergency_hi": "यह मेडिकल इमरजेंसी है। उन्हें तुरंत अस्पताल पहुँचाएँ या मदद बुलाएँ। अगर वे भ्रमित हैं, बेहोश हैं, या दौरा पड़ रहा है, तो यह जानलेवा है — इंतज़ार न करें।"
   },
   {
     "id": "dehydration",
     "condition_en": "Dehydration & heat exhaustion",
-    "condition_hi": "[HI PENDING] निर्जलीकरण और गर्मी से थकावट",
+    "condition_hi": "पानी की कमी और गर्मी से थकावट",
     "signs_en": "Heavy sweating, pale and clammy skin, headache, dizziness, tiredness, muscle cramps, feeling sick, dark urine or not urinating. Comes on before heatstroke.",
-    "signs_hi": "[HI PENDING]",
+    "signs_hi": "बहुत पसीना, पीली और चिपचिपी त्वचा, सिरदर्द, चक्कर, थकान, मांसपेशियों में ऐंठन, जी मिचलाना, गहरे रंग का पेशाब या पेशाब का न आना। यह लू लगने से पहले होता है।",
     "actions_en": "Move to a cool, shaded place and have them lie down with legs raised. Give plenty of water in small sips; an ORS packet or a pinch of salt and some sugar in water helps replace salts. Loosen tight clothing. Let them rest and cool down slowly.",
-    "actions_hi": "[HI PENDING]",
+    "actions_hi": "ठंडी, छायादार जगह पर ले जाएँ और पैर ऊपर करके लिटाएँ। घूंट-घूंट खूब पानी दें; ओआरएस का पैकेट, या पानी में चुटकी भर नमक और थोड़ी चीनी, नमक की कमी पूरी करने में मदद करती है। कसे हुए कपड़े ढीले करें। आराम करने दें और धीरे-धीरे ठंडा होने दें।",
     "emergency_en": "If they get worse, stop sweating, become confused, or their skin turns hot and dry, treat it as heatstroke and get help immediately.",
-    "emergency_hi": "[HI PENDING]"
+    "emergency_hi": "अगर हालत बिगड़े, पसीना आना बंद हो जाए, वे भ्रमित हो जाएँ, या त्वचा गर्म और सूखी हो जाए, तो इसे लू मानें और तुरंत मदद लें।"
   },
   {
     "id": "teargas",
     "condition_en": "Tear gas exposure",
-    "condition_hi": "[HI PENDING] आँसू गैस का संपर्क",
+    "condition_hi": "आँसू गैस का असर",
     "signs_en": "Burning and watering eyes, burning nose, mouth and throat, coughing, tight chest, skin stinging. Symptoms usually start within a minute of exposure.",
-    "signs_hi": "[HI PENDING]",
+    "signs_hi": "आँखों में जलन और पानी, नाक, मुँह और गले में जलन, खाँसी, सीने में जकड़न, त्वचा में चुभन। असर आमतौर पर एक मिनट के अंदर शुरू हो जाता है।",
     "actions_en": "Get to fresh air and higher ground, away from the gas. Stay calm and breathe evenly — do not rub your eyes. Flush open eyes with clean water for 10 to 15 minutes. Remove contact lenses. Wash exposed skin with soap and water. Change out of contaminated clothing as soon as you can and air it out separately; the powder stays active for days.",
-    "actions_hi": "[HI PENDING]",
+    "actions_hi": "खुली हवा में और ऊँची जगह पर जाएँ, गैस से दूर। शांत रहें और सामान्य साँस लें — आँखें न मलें। खुली आँखों को साफ़ पानी से 10 से 15 मिनट तक धोएँ। कॉन्टैक्ट लेंस निकाल दें। जिस त्वचा पर गैस लगी है उसे साबुन और पानी से धोएँ। जितनी जल्दी हो सके कपड़े बदलें और उन्हें अलग हवा में रखें; पाउडर कई दिनों तक असर करता रहता है।",
     "emergency_en": "Most people recover in 15 to 30 minutes. Get medical help if breathing stays hard, if symptoms last beyond 30 minutes, or for anyone with asthma, a lung condition, the very young or the elderly.",
-    "emergency_hi": "[HI PENDING]"
+    "emergency_hi": "ज़्यादातर लोग 15 से 30 मिनट में ठीक हो जाते हैं। अगर साँस लेने में दिक्कत बनी रहे, 30 मिनट बाद भी तकलीफ़ हो, या किसी को दमा या फेफड़ों की बीमारी हो, या बहुत छोटे बच्चे और बुज़ुर्ग हों, तो डॉक्टर के पास जाएँ।"
   },
   {
     "id": "bleeding",
     "condition_en": "Serious bleeding",
-    "condition_hi": "[HI PENDING] गंभीर रक्तस्राव",
+    "condition_hi": "गंभीर खून बहना",
     "signs_en": "Blood flowing or spurting from a wound, a deep cut, or blood soaking through a dressing.",
-    "signs_hi": "[HI PENDING]",
+    "signs_hi": "घाव से खून बहना या तेज़ी से निकलना, गहरा कट, या पट्टी के आर-पार खून भीगना।",
     "actions_en": "Press hard directly on the wound with a clean cloth or your hand and keep pressing. Raise the injured part above the level of the heart if you can. Do not remove a cloth once it is soaked — add another on top and keep pressing. Lay the person down and keep them warm.",
-    "actions_hi": "[HI PENDING]",
+    "actions_hi": "साफ़ कपड़े या अपने हाथ से घाव पर ज़ोर से दबाएँ और दबाए रखें। हो सके तो चोट वाले हिस्से को दिल की ऊँचाई से ऊपर उठाएँ। भीगा हुआ कपड़ा हटाएँ नहीं — उसके ऊपर दूसरा रखें और दबाते रहें। घायल को लिटाएँ और गर्म रखें।",
     "emergency_en": "Get help immediately for any heavy bleeding, or if the person becomes pale, cold, drowsy or confused — these are signs of dangerous blood loss.",
-    "emergency_hi": "[HI PENDING]"
+    "emergency_hi": "ज़्यादा खून बहने पर, या अगर व्यक्ति पीला, ठंडा, सुस्त या भ्रमित लगे, तो तुरंत मदद लें — ये ख़तरनाक खून की कमी के लक्षण हैं।"
   },
   {
     "id": "blunt-injury",
     "condition_en": "Baton blow or blunt injury",
-    "condition_hi": "[HI PENDING] लाठी की चोट",
+    "condition_hi": "लाठी या चोट लगना",
     "signs_en": "Pain, swelling or bruising after a blow. Possible broken bone if there is deformity, severe pain, or the part cannot be moved.",
-    "signs_hi": "[HI PENDING]",
+    "signs_hi": "चोट के बाद दर्द, सूजन या नील। अगर हिस्सा टेढ़ा दिखे, बहुत दर्द हो, या हिलाया न जा सके, तो हड्डी टूटी हो सकती है।",
     "actions_en": "Rest the injured part and support it in the most comfortable position — do not force it straight. Apply a cold pack or cloth-wrapped ice for swelling. Do not move someone who may have a head, neck or spine injury unless they are in danger; keep them still and get help.",
-    "actions_hi": "[HI PENDING]",
+    "actions_hi": "चोट वाले हिस्से को आराम दें और जिस स्थिति में आराम मिले उसी में सहारा दें — ज़बरदस्ती सीधा न करें। सूजन के लिए ठंडी पट्टी या कपड़े में लपेटी बर्फ़ लगाएँ। जिसके सिर, गर्दन या रीढ़ में चोट हो सकती है उसे तब तक न हिलाएँ जब तक कोई ख़तरा न हो; उसे स्थिर रखें और मदद बुलाएँ।",
     "emergency_en": "Get help immediately for a blow to the head, neck, chest or abdomen, for any loss of consciousness, confusion, vomiting, trouble breathing, or a suspected broken bone.",
-    "emergency_hi": "[HI PENDING]"
+    "emergency_hi": "सिर, गर्दन, सीने या पेट पर चोट, बेहोशी, भ्रम, उल्टी, साँस लेने में दिक्कत, या हड्डी टूटने के शक में तुरंत मदद लें।"
   },
   {
     "id": "crush",
     "condition_en": "Crush injury (crowd crush)",
-    "condition_hi": "[HI PENDING] भीड़ में दबने की चोट",
+    "condition_hi": "भीड़ में दबने की चोट",
     "signs_en": "Someone trapped or crushed by a crowd or object, or having trouble breathing after being pressed in a dense crowd. Chest may be compressed so they cannot expand it to breathe.",
-    "signs_hi": "[HI PENDING]",
+    "signs_hi": "कोई भीड़ या किसी चीज़ के नीचे दबा हो, या घनी भीड़ में दबने के बाद साँस लेने में दिक्कत हो। सीना इतना दब सकता है कि साँस लेने के लिए फैल न पाए।",
     "actions_en": "If a crowd is compressing you, keep your arms up in front of your chest to protect space to breathe and move with the crowd, not against it. Help free anyone pinned only if it is safe. Once free, help them to fresh air and a comfortable position and monitor their breathing.",
-    "actions_hi": "[HI PENDING]",
+    "actions_hi": "अगर भीड़ आपको दबा रही है, तो बाँहें सीने के आगे ऊपर रखें ताकि साँस लेने की जगह बनी रहे, और भीड़ के ख़िलाफ़ नहीं, उसके साथ चलें। किसी फँसे हुए व्यक्ति को तभी निकालें जब ऐसा करना सुरक्षित हो। बाहर आने पर उन्हें खुली हवा में आरामदायक स्थिति में बैठाएँ और साँस पर नज़र रखें।",
     "emergency_en": "Get medical help immediately for anyone who was trapped and is short of breath, has chest pain, or was crushed for more than a few minutes — internal injury may not be visible.",
-    "emergency_hi": "[HI PENDING]"
+    "emergency_hi": "अगर कोई फँसा रहा हो और उसे साँस लेने में दिक्कत हो, सीने में दर्द हो, या वह कुछ मिनट से ज़्यादा दबा रहा हो, तो तुरंत डॉक्टर के पास ले जाएँ — अंदरूनी चोट बाहर से दिखती नहीं।"
   }
 ]
