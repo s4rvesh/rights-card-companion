@@ -74,3 +74,22 @@ export type Hospital = {
 export type Bilingual<K extends string> = {
   [P in `${K}_en` | `${K}_hi`]: string;
 };
+/** A "Do" or "Don't" behaviour item shown on the Before You Go screen. */
+export type DoDontItem = {
+  id: string;
+  kind: "do" | "dont";
+  title_en: string;
+  title_hi: string;
+  detail_en: string;
+  detail_hi: string;
+};
+
+/** A packing checklist item. take=false means "leave this at home". */
+export type ChecklistItem = {
+  id: string;
+  take: boolean;
+  label_en: string;
+  label_hi: string;
+  note_en: string;
+  note_hi: string;
+};

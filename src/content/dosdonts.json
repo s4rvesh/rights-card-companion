@@ -1,0 +1,106 @@
+[
+  {
+    "id": "tell-someone",
+    "kind": "do",
+    "title_en": "Tell someone where you are going",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "Tell one person who is not going with you where you will be and when you expect to be back. If you stop replying, they will know when to start asking questions.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "id": "write-arm",
+    "kind": "do",
+    "title_en": "Write an emergency number on your arm",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "Use permanent marker. Phones get taken, run out of battery, or lock. A number on your skin still works.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "id": "buddy",
+    "kind": "do",
+    "title_en": "Go with someone. Agree a meeting point.",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "Pick a landmark away from the crowd where you will both go if you get separated or if the network goes down. Agree a time as well as a place.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "id": "exits",
+    "kind": "do",
+    "title_en": "Know your exits before the crowd builds",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "When you arrive, look for the roads out and note which direction they are in. Crowds get dense quickly and it is much harder to work this out later.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "id": "hands-visible",
+    "kind": "do",
+    "title_en": "Keep your hands visible. Stay calm.",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "If police approach, keep your hands where they can be seen, move slowly, and speak calmly. Asserting your rights and staying calm are not opposites.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "id": "drink-early",
+    "kind": "do",
+    "title_en": "Drink water before you feel thirsty",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "Thirst arrives late. In 40C heat you are already losing fluid well before you notice. Sip steadily rather than drinking a lot at once.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "id": "note-officer",
+    "kind": "do",
+    "title_en": "Note the officer's name and number",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "If something happens to you or someone near you, officers must wear visible identification. Note it, and the time, as soon as you safely can.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "id": "dont-run",
+    "kind": "dont",
+    "title_en": "Don't run if the crowd surges",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "Running in a dense crowd is how people fall and get trampled. Stay on your feet, keep your arms up in front of your chest to protect space to breathe, and move diagonally with the crowd rather than against it.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "id": "dont-rub",
+    "kind": "dont",
+    "title_en": "Don't rub your eyes after tear gas",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "Rubbing grinds the chemical into your skin and eyes and makes it much worse. Face into the wind, blink hard, and flush with clean water instead.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "id": "dont-argue",
+    "kind": "dont",
+    "title_en": "Don't argue with, push, or touch police",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "You can decline to answer questions and you can state your rights, calmly. Physical contact or shouting escalates the situation and can turn into a fresh charge against you.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "id": "dont-rumour",
+    "kind": "dont",
+    "title_en": "Don't spread unverified news",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "Rumours move fastest in a crowd and cause panic and crushes. Before forwarding anything, ask where it came from and whether you would stake someone's safety on it.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "id": "dont-photos",
+    "kind": "dont",
+    "title_en": "Don't post photos that identify other protesters",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "A face in your photo can be used to identify someone later. Blur faces, or photograph the crowd from behind, and ask before posting anyone recognisable.",
+    "detail_hi": "[HI PENDING]"
+  },
+  {
+    "id": "dont-alone",
+    "kind": "dont",
+    "title_en": "Don't go alone if you can avoid it",
+    "title_hi": "[HI PENDING]",
+    "detail_en": "Someone who knows you are there and can raise the alarm is the single most useful safety measure available to you.",
+    "detail_hi": "[HI PENDING]"
+  }
+]

@@ -1,0 +1,138 @@
+[
+  {
+    "id": "water",
+    "take": true,
+    "label_en": "Water — more than you think",
+    "label_hi": "[HI PENDING]",
+    "note_en": "You will drink it faster than you expect, and you may end up sharing it.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "ors",
+    "take": true,
+    "label_en": "ORS sachets, or salt and sugar",
+    "label_hi": "[HI PENDING]",
+    "note_en": "Water alone does not replace what you lose sweating in this heat.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "food",
+    "take": true,
+    "label_en": "Food that will not spoil",
+    "label_hi": "[HI PENDING]",
+    "note_en": "Dry snacks, nuts, biscuits. Something for a friend too.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "sun",
+    "take": true,
+    "label_en": "Cap, umbrella, or light long sleeves",
+    "label_hi": "[HI PENDING]",
+    "note_en": "Shade you carry with you. Long sleeves in light cotton beat bare arms in direct sun.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "firstaid",
+    "take": true,
+    "label_en": "Small first aid kit",
+    "label_hi": "[HI PENDING]",
+    "note_en": "Bandages, antiseptic, gauze, and a clean cloth. Enough to stop bleeding and cover a wound.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "meds",
+    "take": true,
+    "label_en": "Your own medication, plus extra",
+    "label_hi": "[HI PENDING]",
+    "note_en": "Carry more than one day's worth in case you cannot get home. If you use an inhaler, bring it and keep it on you, not in a bag you might lose.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "glasses",
+    "take": true,
+    "label_en": "Glasses, not contact lenses",
+    "label_hi": "[HI PENDING]",
+    "note_en": "Tear gas gets trapped under a lens against your eye. Wear glasses if you can.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "cloth",
+    "take": true,
+    "label_en": "A scarf or cloth, and clean water for eyes",
+    "label_hi": "[HI PENDING]",
+    "note_en": "A separate small bottle kept clean, so you can flush your eyes without using your drinking water.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "phone",
+    "take": true,
+    "label_en": "Charged phone and a power bank",
+    "label_hi": "[HI PENDING]",
+    "note_en": "Turn the brightness down and close what you are not using. Heat drains batteries fast.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "marker",
+    "take": true,
+    "label_en": "Permanent marker",
+    "label_hi": "[HI PENDING]",
+    "note_en": "For writing an emergency number on your arm, and on a friend's.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "cash",
+    "take": true,
+    "label_en": "Some cash for transport",
+    "label_hi": "[HI PENDING]",
+    "note_en": "Enough to get home. Digital payments fail when the network is shut down.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "id",
+    "take": true,
+    "label_en": "Your ID",
+    "label_hi": "[HI PENDING]",
+    "note_en": "Being able to establish who you are is usually helpful, including to whoever is trying to find you.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "no-contacts",
+    "take": false,
+    "label_en": "Contact lenses",
+    "label_hi": "[HI PENDING]",
+    "note_en": "Tear gas gets trapped underneath and keeps burning. Wear glasses instead.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "no-oil",
+    "take": false,
+    "label_en": "Oil-based lotion, moisturiser or makeup",
+    "label_hi": "[HI PENDING]",
+    "note_en": "Tear gas powder sticks to oil and stays on your skin. Go with a clean, dry face.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "no-weapon",
+    "take": false,
+    "label_en": "Anything sharp, or anything that could be called a weapon",
+    "label_hi": "[HI PENDING]",
+    "note_en": "The right to assemble is protected when it is peaceful and without arms. Do not give anyone a reason to say otherwise.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "no-valuables",
+    "take": false,
+    "label_en": "Valuables you cannot afford to lose",
+    "label_hi": "[HI PENDING]",
+    "note_en": "Things get dropped, crushed, and taken. Bring only what you can walk away without.",
+    "note_hi": "[HI PENDING]"
+  },
+  {
+    "id": "no-substances",
+    "take": false,
+    "label_en": "Alcohol or anything illegal",
+    "label_hi": "[HI PENDING]",
+    "note_en": "It slows your judgement when you need it most, and hands over an easy separate charge.",
+    "note_hi": "[HI PENDING]"
+  }
+]
