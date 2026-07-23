@@ -19,7 +19,7 @@ import type { LawRef } from "@/content/types";
 
 export function DisclosureList({ children }: { children: ReactNode }) {
   return (
-    <AccordionPrimitive.Root type="multiple" className="border-t border-ink">
+    <AccordionPrimitive.Root type="multiple" className="flex flex-col gap-2.5 px-4">
       {children}
     </AccordionPrimitive.Root>
   );
@@ -38,9 +38,12 @@ export function DisclosureItem({
   children: ReactNode;
 }) {
   return (
-    <AccordionPrimitive.Item value={value} className="border-b border-steel/60">
+    <AccordionPrimitive.Item
+      value={value}
+      className="card-shadow overflow-hidden rounded-card bg-paper data-[state=open]:ring-2 data-[state=open]:ring-violet/25"
+    >
       <AccordionPrimitive.Header>
-        <AccordionPrimitive.Trigger className="group flex w-full items-start gap-3 px-4 py-4 text-left">
+        <AccordionPrimitive.Trigger className="pressable group flex w-full items-start gap-3 px-4 py-4 text-left">
           {gutter !== undefined && (
             <span
               aria-hidden
@@ -52,7 +55,7 @@ export function DisclosureItem({
           <span className="flex-1 font-display text-[18px] font-bold uppercase leading-tight tracking-tight text-ink">
             {title}
           </span>
-          <span className="shrink-0 font-mono text-[22px] leading-none text-steel transition-transform duration-150 group-data-[state=open]:rotate-45">
+          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-chip bg-canvas font-mono text-[17px] leading-none text-steel transition-transform duration-150 group-data-[state=open]:rotate-45 group-data-[state=open]:bg-violet group-data-[state=open]:text-paper">
             +
           </span>
         </AccordionPrimitive.Trigger>
@@ -98,7 +101,7 @@ export function Block({
 export function LawBlock({ label, law }: { label: string; law: LawRef[] }) {
   if (!law || law.length === 0) return null;
   return (
-    <AccordionPrimitive.Root type="single" collapsible className="border-t border-steel/40 pt-3">
+    <AccordionPrimitive.Root type="single" collapsible className="rounded-[14px] bg-canvas px-3 py-2.5">
       <AccordionPrimitive.Item value="law">
         <AccordionPrimitive.Header>
           <AccordionPrimitive.Trigger className="group flex w-full items-center justify-between text-left">
