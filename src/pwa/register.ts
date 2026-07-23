@@ -1,6 +1,8 @@
 // Guarded PWA registration wrapper. Per PWA skill: never register in dev,
 // iframes, or Lovable preview/dev hosts. Kill-switch via ?sw=off.
 
+import { warmOfflineCache } from "./warm";
+
 const SW_URL = "/sw.js";
 
 function isRefusedContext(): boolean {
@@ -65,4 +67,8 @@ export async function registerPWA(): Promise<void> {
       emit("needs-refresh");
     },
   });
+
+  // Pull every route into the cache in the background so the app works
+  // offline after a single visit, without the user opening each section.
+  warmOfflineCache();
 }
