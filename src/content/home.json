@@ -4,25 +4,33 @@
       "id": "rights",
       "to": "/rights",
       "label_en": "MY RIGHTS",
-      "label_hi": "मेरे अधिकार"
+      "label_hi": "मेरे अधिकार",
+      "sub_en": "What they must tell you",
+      "sub_hi": "वे आपको क्या बताने के लिए बाध्य हैं"
     },
     {
       "id": "detained",
       "to": "/detained",
       "label_en": "I'VE BEEN DETAINED",
-      "label_hi": "मुझे हिरासत में लिया गया है"
+      "label_hi": "मुझे हिरासत में लिया गया है",
+      "sub_en": "The first hour, step by step",
+      "sub_hi": "पहला घंटा, कदम दर कदम"
     },
     {
       "id": "legal",
       "to": "/legal",
       "label_en": "LEGAL HELP",
-      "label_hi": "कानूनी मदद"
+      "label_hi": "कानूनी मदद",
+      "sub_en": "Free legal aid numbers",
+      "sub_hi": "निःशुल्क कानूनी सहायता नंबर"
     },
     {
       "id": "medical",
       "to": "/medical",
       "label_en": "MEDICAL",
-      "label_hi": "चिकित्सा"
+      "label_hi": "चिकित्सा",
+      "sub_en": "Heat, tear gas, injury",
+      "sub_hi": "गर्मी, आँसू गैस, चोट"
     }
   ],
   "settings_en": "Settings",
@@ -36,5 +44,9 @@
   "quote_source_en": "Mahatma Gandhi · Young India, 11 August 1920",
   "quote_source_hi": "महात्मा गांधी · यंग इंडिया, 11 अगस्त 1920",
   "before_en": "BEFORE YOU GO",
-  "before_hi": "जाने से पहले"
+  "before_hi": "जाने से पहले",
+  "tagline_en": "Bole toh Gandhigiri zindabad!",
+  "tagline_hi": "बोले तो गांधीगिरी ज़िंदाबाद!",
+  "before_sub_en": "Pack this. Do this. Skip this.",
+  "before_sub_hi": "यह साथ लें। यह करें। यह न करें।"
 }
