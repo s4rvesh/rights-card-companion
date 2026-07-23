@@ -111,7 +111,7 @@ function RightsScreen() {
   }
 
   return (
-    <div className="min-h-dvh bg-paper text-ink">
+    <div className="min-h-dvh bg-canvas text-ink">
       <div className="mx-auto flex max-w-2xl flex-col">
         <header className="flex items-center justify-between px-4 pt-4">
           <Link

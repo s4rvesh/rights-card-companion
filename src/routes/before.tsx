@@ -55,7 +55,7 @@ function writePacked(ids: string[]) {
 /** Section heading in the shared visual language (mono, uppercase, rule). */
 function SectionHead({ children }: { children: string }) {
   return (
-    <h2 className="border-b border-ink bg-paper px-4 py-3 font-mono text-[12px] font-bold uppercase tracking-wider text-ink">
+    <h2 className="px-4 pb-2 pt-6 font-mono text-[12px] font-bold uppercase tracking-wider text-steel">
       {children}
     </h2>
   );
@@ -79,16 +79,18 @@ function CheckRow({
       type="button"
       onClick={() => onToggle(item.id)}
       aria-pressed={checked}
-      className="flex w-full items-start gap-3 border-b border-steel/40 px-4 py-4 text-left"
+      className={`pressable card-shadow mx-4 flex w-[calc(100%-2rem)] items-start gap-3 rounded-card px-4 py-4 text-left ${
+        checked ? "bg-canvas" : "bg-paper"
+      }`}
     >
       <span
         aria-hidden
-        className={`mt-[2px] flex h-6 w-6 shrink-0 items-center justify-center border-2 font-mono text-[14px] leading-none ${
+        className={`mt-[2px] flex h-7 w-7 shrink-0 items-center justify-center rounded-[9px] border-2 font-mono text-[15px] leading-none transition-colors ${
           checked
             ? item.take
-              ? "border-ink bg-ink text-paper"
+              ? "border-mint bg-mint text-ink"
               : "border-alert bg-alert text-paper"
-            : "border-steel text-paper"
+            : "border-steel/40 bg-canvas text-transparent"
         }`}
       >
         {checked ? "✓" : ""}
@@ -138,7 +140,7 @@ function BeforeScreen() {
   const donts = RULES.filter((r) => r.kind === "dont");
 
   return (
-    <div className="min-h-dvh bg-paper text-ink">
+    <div className="min-h-dvh bg-canvas text-ink">
       <div className="mx-auto flex max-w-2xl flex-col">
         <header className="flex items-center justify-between px-4 pt-4">
           <Link
@@ -158,6 +160,7 @@ function BeforeScreen() {
 
         {/* --- Packing checklist ------------------------------------------ */}
         <SectionHead>{t(copy, "take")}</SectionHead>
+        <div className="flex flex-col gap-2.5">
         {take.map((item) => (
           <CheckRow
             key={item.id}
@@ -168,8 +171,10 @@ function BeforeScreen() {
             note={t(item, "note")}
           />
         ))}
+        </div>
 
         <SectionHead>{t(copy, "avoid")}</SectionHead>
+        <div className="flex flex-col gap-2.5">
         {avoid.map((item) => (
           <CheckRow
             key={item.id}
@@ -180,6 +185,7 @@ function BeforeScreen() {
             note={t(item, "note")}
           />
         ))}
+        </div>
 
         <div className="px-4 py-4">
           <button

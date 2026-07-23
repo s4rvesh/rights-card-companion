@@ -77,7 +77,7 @@ function MedicalScreen() {
   }, [allHospitals, selectedState]);
 
   return (
-    <div className="min-h-dvh bg-paper text-ink">
+    <div className="min-h-dvh bg-canvas text-ink">
       <div className="mx-auto flex max-w-2xl flex-col">
         <header className="flex items-center justify-between px-4 pt-4">
           <Link
@@ -111,7 +111,7 @@ function MedicalScreen() {
         </DisclosureList>
 
         <section className="pb-12 pt-8">
-          <h2 className="border-b border-ink bg-paper px-4 py-3 font-mono text-[12px] font-bold uppercase tracking-wider text-ink">
+          <h2 className="px-4 pb-2 pt-6 font-mono text-[12px] font-bold uppercase tracking-wider text-steel">
             {t(copy, "hospitals")}
             {selectedState ? ` — ${selectedState}` : ""}
           </h2>

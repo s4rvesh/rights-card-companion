@@ -45,7 +45,7 @@ function DetainedScreen() {
   const { t } = useLang();
 
   return (
-    <div className="flex min-h-dvh flex-col bg-paper text-ink">
+    <div className="flex min-h-dvh flex-col bg-canvas text-ink">
       <div className="mx-auto flex w-full max-w-2xl flex-1 flex-col">
         <header className="flex items-center justify-between px-4 pt-4">
           <Link
